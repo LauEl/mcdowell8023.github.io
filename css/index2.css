@@ -1,6 +1,6 @@
 /*主页样式*/
 html{ font-size: 20px;overflow: hidden; }
-body{ font-size: 14rem; background: #282a2e;  }
+body{ font-size: 14px; background: #282a2e;  }
 .layout{ margin: 0 auto; max-width: 1200px; _min-width: 340px;_background: #282a2e; }
 .w100{width: 100%; }
 .h100{height: 100%; }
