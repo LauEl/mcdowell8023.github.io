@@ -1,0 +1,37 @@
+/*主页样式*/
+body{ background: #282a2e;  }
+.layout_m{ margin: 0 auto; max-width: 1200px; _background: #282a2e; }
+.layout_p{ width: 980px; margin: 0 auto; max-width: 1200px; }
+
+.w100{width: 100%; }
+.h100{height: 100%; }
+.wh100{height: 100%; width: 100%; }
+
+
+
+/*头部导航*/
+.header{ position: fixed; top:-100px; left: 0; background: #282a2e; width: 100%; z-index: 100;}
+.header .head_nav{  }
+
+.head_nav .logo{float: left; }
+.head_nav .logo h1{ padding: 20px ; }
+.head_nav .logo a{ display: block; background: url(../img/logo.png) no-repeat center; width: 300px; height: 60px;text-indent:-9999em; background-size:cover; }
+.head_nav .nav{float: right; position: relative; }
+.head_nav .nav li{float: left; font-size: 20px; line-height: 100px;  position: relative; overflow:hidden;}
+.head_nav .nav p{ display:inline-block; padding: 0 20px; height: 100px;    }
+.head_nav .nav a{ height: 100px; width: 100%; background: #282a2e;  position: absolute; left: 0; top: -100px; text-align: center;}
+/*.head_nav .nav li:hover a{ bottom: 0; }*/
+
+.head_nav .nav .border{ height: 5px; background: #7fa242; width: 98px; position: absolute; left: 0; bottom: 0;  }
+
+
+/*展示*/
+.head_box{ background: url(../img/bg.jpg) no-repeat 0 0; background-size: cover;width: 100%;  }
+.head_box .head_bg{ background: rgba(0,0,0,0.3);  }
+.head_box .head{ position: relative;  overflow: hidden; }
+.head .welcome{ position: absolute; top: 0; left: 0;  font-size: 20px;  background:url(../img/bg2.png) no-repeat bottom right rgba(0,0,0,0.5); color: #7fa242; }
+.head .welcome div{padding: 240px 0 20px 20px;  font-size: 50px; }
+.head .welcome p{ padding-left:20px;color: #7fa242;   }
+.head .welcome .count1{ font-size: 20PX; }
+
+.head .banner{  }
