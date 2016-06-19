@@ -1,8 +1,8 @@
 /*主页样式*/
-body{ background: #282a2e;  }
-.layout_m{ margin: 0 auto; max-width: 1200px; _background: #282a2e; }
-.layout_p{ width: 980px; margin: 0 auto; max-width: 1200px; }
-
+html{ font-size: 20px;overflow: hidden; }
+body{ font-size: 14px; background: #282a2e;  }
+.layout{ margin: 0 auto; width: 1200px;  }
+.maxh{ height:720px;}
 .w100{width: 100%; }
 .h100{height: 100%; }
 .wh100{height: 100%; width: 100%; }
@@ -10,28 +10,144 @@ body{ background: #282a2e;  }
 
 
 /*头部导航*/
-.header{ position: fixed; top:-100px; left: 0; background: #282a2e; width: 100%; z-index: 100;}
-.header .head_nav{  }
+.header{ position: fixed; top:-100px; left: 0; background: #282a2e; width: 100%; z-index: 101;}
+.header .head_nav{ }
 
 .head_nav .logo{float: left; }
-.head_nav .logo h1{ padding: 20px ; }
-.head_nav .logo a{ display: block; background: url(../img/logo.png) no-repeat center; width: 300px; height: 60px;text-indent:-9999em; background-size:cover; }
-.head_nav .nav{float: right; position: relative; }
-.head_nav .nav li{float: left; font-size: 20px; line-height: 100px;  position: relative; overflow:hidden;}
-.head_nav .nav p{ display:inline-block; padding: 0 20px; height: 100px;    }
-.head_nav .nav a{ height: 100px; width: 100%; background: #282a2e;  position: absolute; left: 0; top: -100px; text-align: center;}
-/*.head_nav .nav li:hover a{ bottom: 0; }*/
-
-.head_nav .nav .border{ height: 5px; background: #7fa242; width: 98px; position: absolute; left: 0; bottom: 0;  }
+.head_nav .logo h1{ padding-top: 20px; }
+.head_nav .logo a{  display: block; background: url(../img/logo.png) no-repeat 0 0; width: 300px; height: 60px;text-indent:-9999em; background-size:cover; }
+/*pc导航*/
+.head_nav .nav{float: right; position: relative;}
+.head_nav .nav li{float: left; font-size:20px; line-height: 100px; height: 100px; width: 100px; position: relative; overflow:hidden;}
+.head_nav .nav p{height:100%; text-align: center; width: 100%;  position: absolute; left: 0; top: 0;  }
+.head_nav .nav a{ height: 100%; width: 100%; background: #282a2e;  position: absolute; left: 0; top: -100px; text-align: center; }
 
 
-/*展示*/
-.head_box{ background: url(../img/bg.jpg) no-repeat 0 0; background-size: cover;width: 100%;  }
-.head_box .head_bg{ background: rgba(0,0,0,0.3);  }
-.head_box .head{ position: relative;  overflow: hidden; }
-.head .welcome{ position: absolute; top: 0; left: 0;  font-size: 20px;  background:url(../img/bg2.png) no-repeat bottom right rgba(0,0,0,0.5); color: #7fa242; }
-.head .welcome div{padding: 240px 0 20px 20px;  font-size: 50px; }
-.head .welcome p{ padding-left:20px;color: #7fa242;   }
-.head .welcome .count1{ font-size: 20PX; }
+.head_nav .nav .border{ height: 5px; background: #7fa242; width: 100px; position: absolute; left: 0; bottom: 0;  }
+/*移动端导航*/
+.head_nav .nav_m{float: right; display: none; }
+.head_nav .nav_m .nav_btn{ display: block;text-align: center; line-height: 100px ; font-size: 20px; width: 60px; height: 100px; }
+.head_nav .nav_m ul{ position: absolute; left: 0; top: 100px; display: none;  }
+.head_nav .nav_m ul li a{background:rgba(40, 42, 46, 0.85); border-bottom: 1px solid rgba(40, 42, 46,1); display: block; height: 40px; font-size: 20px; line-height: 40px; text-align: right;  padding-right: 20px; }
+.head_nav .nav_m ul li:hover a { border-bottom: 1px solid #7fa242; background:rgba(0, 0, 0, 0.85);}
 
-.head .banner{  }
+.head_nav .navbar{ width: 60px; height: 6px; position: absolute; left: 50%; margin-left: -30px; bottom: -6px; background: #7fa242; }
+/*布局样式*/
+.main{ position: absolute; top: 0; left: 0; width: 100%; z-index: 1;}
+
+
+/*主页点按钮*/
+.m_page{ position: absolute; top: 50%; right: 1%; width: 10px; z-index:100;}
+.m_page p{cursor: pointer; width: 6px; height: 6px; margin-bottom: 10px; background: #7fa242; border-radius: 50%; position: relative; }
+.m_page p span{ display: none; }
+.m_page .on{ width: 10px; height: 10px; margin-left: -2px;}
+.m_page .on span{ display: block; position: absolute; font-size:0.5rem; color: rgba(255,255,255,0.5); top:-0.2rem; left: -1.5rem;  }
+
+/*媒体查询*/
+
+@media screen and (min-width:980px) {
+	
+}
+@media screen and (min-width:750px) and (max-width:840px){
+	html{ font-size: 18px; }
+}
+@media screen and (min-width:640px) and (max-width:750px){
+	html{ font-size: 16px; }
+
+}
+@media screen and (max-width:639px){
+	html{ font-size: 14px; }
+	.head_nav .nav{ display: none; }
+	.head_nav .nav_m{ display: block;}
+}
+
+/*以第一屏*/
+.main .m_page1{ background: url(../img/bg.jpg) no-repeat center; background-size: cover; width: 100%; position: relative;  overflow: hidden;}
+.main .m_page1 .pagebg{ _background: rgba(0,0,0,0.3); position:relative; overflow: hidden; max-height: 780px;}
+
+/*一屏幕轮播图*/
+.m_page1 .pagebg .playbanner{padding-top:100px; position:absolute; left:0; top:0; height: 100%; overflow: hidden;  }
+ 
+
+.m_page1 .pagebg .welcome1{font-size: 20px;  background: rgba(0,0,0,0.5);  position: relative; width: 1200px;}
+.m_page1 .pagebg .welcome1 div{padding: 240px 0 20px 20px;  font-size: 40px; overflow: hidden;}
+.m_page1 .welcome1 p{ padding-left:20px; color: #7fa242;   font-size: 20px; }
+
+.m_page1 .welcome1 .count{ position: absolute; top: 100px; right:0; width: 100%; height: 85%; opacity: 0.5; overflow: hidden;}
+.m_page1 .welcome1 ul li{ position: absolute;  }
+.m_page1 .welcome1 .count1{ font-size: 30px; right:5%; top:10%; transform:rotate(7deg);}
+.m_page1 .welcome1 .count2{ font-size: 30px; right: 12%; top:20%; transform:rotate(-9deg);}
+.m_page1 .welcome1 .count3{ font-size: 40px; right: 15%; top:38%; transform:rotate(10deg);}
+.m_page1 .welcome1 .count4{ font-size: 36px; right: 25%; top:50%; transform:rotate(-9deg);}
+.m_page1 .welcome1 .count5{ font-size: 60px; right: 26%; top:70%; transform:rotate(7deg);}
+.m_page1 .welcome1 .count6{ font-size: 160px; right: 40%; top:80%;}
+
+.m_page1 .welcome2{ background: rgba(255,0,51,0.5); width: 1200px;}
+.m_page1 .welcome3{ background: rgba(27,84,242,0.5); width: 1200px;}
+.m_page1 .welcome4{ background: rgba(235,101,45,0.5);width: 1200px;}
+.m_page1 .welcome5{ background: rgba(233,219,57,0.5);width: 1200px;}
+.m_page1 .welcome6{ background: rgba(209,227,219,0.5);width: 1200px;}
+
+/*轮播图小进度条*/
+.m_page1 ol{ position:absolute; left:50%; bottom:10px; overflow:hidden; margin-left:-180px; opacity: 0.5; }
+.m_page1 ol li{ width:60px; height:20px; background:#000; margin-left:8px; float:left; position:relative; }
+.m_page1 span{ width:0; height:100%; background:#fff; position:absolute; left:0; top:0; }
+
+
+/*第二屏*/
+.main .m_page2{  position: relative;  overflow: hidden;}
+
+.m_page2 .work{ position: absolute; left: 50%; top: 0; margin-left: -600px;  }
+.m_page2 .work .sidebar{ width: 20%; background: rgba(255,255,255,1); height: 720px; }
+.work .sidebar div{ position: relative; top: 15%;  text-align: center;   }
+.work .sidebar h2{ font-size: 40px;color: #7fa242; line-height: 60px; }
+.work .sidebar p{ font-size:16px; line-height: 20px; color: #666;}
+
+.work .sidebar ul{ position: relative; top: 50%; margin-top: -60px; }
+.work .sidebar ul li{ position: relative; z-index: 2; height: 40px; font-size: 20px; text-align: center; line-height: 40px; }
+.work .sidebar ul li a{ color: #666; }
+.work .sidebar ul li a.aColor{ color: #fff; }
+.work .sidebar ul li.limov{ position: absolute;top: 0; left: 0; background: rgba(245,216,14,0.85); z-index: 1;  }
+.work .tab{ width: 80%; position: relative; overflow: hidden; }
+
+.work .tab ul{ position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;}
+.work .tab ul.tab_block{ opacity: 1; z-index: 2; }
+
+.work .tab ul li { float: left; width: 240px; height: 240px; position: relative; overflow:hidden;}
+.work .tab ul li img{ width: 100%; height: 100%; }
+.work .tab ul li a{ position: absolute; top :0 ; left: 240px; background: rgba(245,216,14,0.5); width: 100%; height: 100%; color: #fff;}
+.work .tab ul li a .work_bor{border:10px solid #f5d80e; padding:110px 0; position: relative; }
+.work .tab ul li a .work_bor .info{position: absolute; top: 0; left:0; width: 100%; height: 100%;}
+
+
+
+
+
+
+
+/*第三屏幕*/
+.main .m_page3{position: relative;  overflow: hidden;  }
+.main .m_page3 .computer_bg{ background: url(../img/mpeage3_bg.png) repeat-X center; position: relative; }
+.main .m_page3 .computer_bg div img{width: 100%; height: 100%;}
+.main .m_page3 .computer_bg .computer_1{ width: 900px; position: absolute; top: 0; left: 50%; margin-left: -450px; }
+
+
+.main .m_page3 .computer_bg .cup{ width: 150px; position: absolute; top: 250px;  right: 5%; }
+.main .m_page3 .computer_bg .glasses{ width: 150px; position: absolute; top: 248px;  right: 20%; }
+.main .m_page3 .computer_bg .key{ width: 400px; position: absolute; bottom: 0;  left: 50%; margin-left: -300px; }
+
+.main .m_page3 .computer_bg .note{ width: 150px; position: absolute; top:50%;  left: 5%; margin-top: -75px; }
+
+.main .m_page3 .computer_bg .mouse{ width: 50px; position: absolute; bottom: 0;  left: 50%; margin-left: 200px;  }
+
+.main .m_page3 .computer_bg .computer_2{ width: 100%; height: 100%; position: absolute; text-align: center; background: url(../img/mpeage3_bg2.png) repeat; display: none; }
+.main .m_page3 .computer_bg .computer_2 img{width: auto; height: 100%; }
+
+
+
+
+
+
+
+.main .m_page4{ position: relative;  overflow: hidden; }
+.main .m_page5{ position: relative;  overflow: hidden; }
