@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{ margin: 0; padding: 0;}
+			body{ width: 100%; height: 100%; background: url(img/bg2.jpg) no-repeat 0 0 /cover;}
+			div{ width:1000px; height: 400px; overflow: hidden; margin: 50px auto; position: relative;}
+			ul{  height: 400px; position: absolute;}
+			ul li{ position: absolute; list-style: none;}
+			ul li img{ width: 100%; height: 100%; position: relative;}
+			ul .li1{ width: 96px; height: 63px; left: 2px; top: -80px; z-index: 1;}
+			ul .li2{ width: 288px; height: 180px; left: 88px;  top: 110px; z-index: 2;}
+			ul .li3{ width: 384px; height: 240px; left: 174px; top: 80px;  z-index: 3;}
+			ul .li4{ width: 480px; height: 300px; left: 260px;  top: 50px; z-index: 4;}
+			ul .li5{ width: 384px; height: 240px; left: 442px;  top: 80px; z-index: 3;}
+			ul .li6{ width: 288px; height: 180px; left: 624px;  top: 110px; z-index: 2;}
+			ul .li7{ width: 96px; height: 63px; left: 902px;  top: -80px; z-index: 1;}
+			/*设置透明度*/
+			ul .li1{ opacity: 0.25; filter: alpha(opacity:25);}
+			ul .li2{ opacity: 0.5; filter: alpha(opacity:25);}
+			ul .li3{ opacity: 0.75; filter: alpha(opacity:25);}
+			ul .li4{ opacity: 1; filter: alpha(opacity:25);}
+			ul .li5{ opacity: 0.75; filter: alpha(opacity:25);}
+			ul .li6{ opacity: 0.5; filter: alpha(opacity:25);}
+			ul .li7{ opacity: 0.25; filter: alpha(opacity:25);}
+			/*#left*/
+			a{ display: none;}
+			#left{ width: 86px; height: 86px; background: url(img/arrow1.png) no-repeat 0 0; position: absolute; left: 218px; top: 150px; z-index: 10;}
+			#right{ width: 86px; height: 86px; background: url(img/arrow2.png) no-repeat 0 0; position: absolute; right: 218px; top: 150px; z-index: 10;}
+		</style>
+		<script src="js/move1.js"></script>
+		<script>
+			function getStyle(obj,sName){
+				return (obj.currentStyle||getComputedStyle(obj,false))[sName];
+			}
+			window.onload=function(){
+				var oBody=document.body;
+				var oDiv=document.getElementsByTagName('div')[0];
+				var oUl=document.getElementsByTagName('ul')[0]
+				var aLi=document.getElementsByTagName('li');
+				var aA=document.getElementsByTagName('a');
+				var oA1=document.getElementById('left');
+				var oA2=document.getElementById('right');
+				var arr=[]; 
+				var timer=null;
+				for(var i=0;i<aLi.length;i++){
+					arr.push({
+						width:aLi[i].offsetWidth,
+						height:aLi[i].offsetHeight,
+						left:aLi[i].offsetLeft,
+						top:aLi[i].offsetTop,
+						zIndex:getStyle(aLi[i],'zIndex'),
+						opacity:getStyle(aLi[i],'opacity')
+					});
+				}
+				oDiv.onmouseenter=function(){
+					for(var i=0;i<aA.length;i++){
+						aA[i].style.display='block';
+					}
+				}
+				oDiv.onmouseleave=function(){
+					for(var i=0;i<aA.length;i++){
+						aA[i].style.display='none';
+					}
+				}
+				oA1.onclick=function(){
+					showLeft();
+				};
+				oA2.onclick=function(){
+					showRight();
+				};
+				function showRight(){
+					arr.push(arr.shift());
+					for(var i=0;i<arr.length;i++){
+						aLi[i].style.zIndex=arr[i].zIndex;
+						startMove(aLi[i],{
+									width: arr[i].width,
+									height: arr[i].height,
+									left:arr[i].left,
+									top:arr[i].top,
+									opacity:arr[i].opacity});
+					}
+				}
+				function showLeft(){
+					arr.unshift(arr.pop());
+					for(var i=0;i<arr.length;i++){
+						aLi[i].style.zIndex=arr[i].zIndex;
+						startMove(aLi[i],{
+									width: arr[i].width,
+									height: arr[i].height,
+									left: arr[i].left,
+									top: arr[i].top,
+									opacity: arr[i].opacity});
+					}
+				}
+				var i=0;
+				timer=setInterval(function(){
+					//i++;
+					//oBody.style.background='url(img/bg'+(i%5+1)+'.jpg) no-repeat 0 0 /cover'
+				},3000);
+			};
+		</script>
+	</head>
+	<body>
+		<div>
+			<a href="javascript:;" id="left"></a>
+			<a href="javascript:;" id="right"></a>
+			<ul>
+				<li class="li1"><img src="img/f1.jpg" alt=""/></li>
+				<li class="li2"><img src="img/f2.jpg" alt=""/></li>
+				<li class="li3"><img src="img/f3.jpg" alt=""/></li>
+				<li class="li4"><img src="img/f4.jpg" alt=""/></li>
+				<li class="li5"><img src="img/f5.jpg" alt=""/></li>
+				<li class="li6"><img src="img/f6.jpg" alt=""/></li>
+				<li class="li7"><img src="img/f7.jpg" alt=""/></li>
+			</ul>
+		</div>
+	</body>
+</html>

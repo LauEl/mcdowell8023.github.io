@@ -1,0 +1,500 @@
+/*分类盒子satrt*/
+.content .sort-box{
+	border: 1px solid #eee;
+	padding: 0 15px; margin-bottom: 10px;
+}
+.sort-box .sort-btn,.sort,.address{
+	border-bottom: 1px dashed #eee;
+	padding-right: 66px;
+}
+
+
+.sort-box .sort-btn{
+	padding: 12px 0;
+}
+.sort-box .sort-btn .sbtn-nam{
+	float: left;width: 68px;
+}
+.sort-box .sort-btn .sbtn-nam a{
+	display: inline-block; padding: 0 8px;
+	height: 20px; line-height: 20px;
+	border: 1px solid #2bb8aa;
+}
+
+
+.sort-box .sort-btn .sbtn{
+	float: left;
+}
+.sort-box .sort-btn .sbtn ul{
+	padding-right: 24px;
+}
+.sort-box .sort-btn .sbtn ul li .arrow{
+	width: 24px;height: 21px;
+	background: url(../img/bj1.png) no-repeat 0 0;
+	position: absolute; top: 0; left: -25px;
+}
+.sort-box .sort-btn .sbtn ul li{
+	float: left; margin-right:45px; 
+	border: 1px solid #2bb8aa; 
+	position: relative; 
+}
+.sort-box .sort-btn .sbtn ul li .bt{
+	display: block;line-height: 20px;
+	background: #fff;position: relative;
+	
+	padding: 0 16px 0 8px;height: 20px;
+}
+.sort-box .sort-btn .sbtn ul li i{
+	position: absolute;top:-1px; right:-21px;
+	width:20px ;height:20px;text-align: center; 
+	line-height: 20px; color: #2bb8aa; cursor: pointer;
+	border: 1px solid #2bb8aa;border-left: 0;
+}
+.sort-box .sort-btn .sbtn ul li b{
+	position: absolute;top: 7px;right: 6px;
+	background:url(../img/bj.png) no-repeat 0 0;
+	width: 6px; height: 3px;
+}
+.sort-box .sort-btn .sbtn ul li .menu{
+	width: 292px; padding: 12px 0 6px 0; 
+	background: #fff; display: none; z-index: 1;
+	border: 1px solid #2bb8aa; overflow: hidden;
+	position: absolute;top: 19px;left: -1px; 
+}
+
+.sort-box .sort-btn .sbtn ul li .menu a{
+	padding:0 10px;display: inline-block;
+	height: 12px; line-height: 12px;margin-bottom: 10px;
+	border-left: 1px solid #eee; margin-left: -1px;
+}
+.sort-box .sort-btn .sbtn ul li .sclose:hover{
+	color:#fff; background:#2bb8aa; 
+}
+/*js添加*/
+.sort-box .sort-btn .sbtn ul li .menu .acolor{
+	color:#2bb8aa;
+}
+.sort-box .sort-btn .sbtn ul .show .menu{
+	display: block;
+}
+.sort-box .sort-btn .sbtn ul .show .bt{
+	z-index: 2;
+}
+.sort-box .sort-btn .sbtn ul .show b{
+	background:url(../img/bj-0.png) no-repeat 0 0;
+}
+/*分类阿牛结束*/
+
+/*分类*/
+.sort-box .sort{
+padding-top: 15px; padding-bottom: 4px;
+}
+.sort-box .sort .sort-name{
+	float: left; width: 45px;color: #666;
+	padding-left: 5px; line-height: 20px;
+}
+.sort-box .sort .sortb{
+	float: left; width: 830px;
+}
+.sort-box .sort .sortb ul li{
+	float: left; margin: 0 18px 4px 0;
+}
+.sort-box .sort .sortb ul li a{
+	display: block; line-height: 20px; 
+	height: 20px; padding: 0 5px;
+	position: relative;
+}
+.sort-box .sort .sortb ul li .aback{
+	color: #fff; background: #2bb8aa;
+}
+.sort-box .sort .sortb ul li .acolor{
+	color: #f76120; 
+}
+
+
+
+
+.sort-box .sort .sortb ul li .aads span{
+	width: 12px; height: 20px; 
+	background: url(../img/fbj2.png) no-repeat 0 0;
+	position: absolute; top: 0; left:-10px;
+}
+.sort-box .people{
+	border-bottom: 0; padding-bottom: 5px;
+}
+/*商圈*/
+.sort-box .business{
+padding-top: 10px; padding-bottom: 10px;
+border-bottom: 1px dashed #eee;
+	display: none;
+}
+.sort-box .business .buies-name{
+	height: 160px;
+	float: left; width: 45px;color: #666;
+	padding-left: 5px; line-height: 20px;
+}
+.sort-box .business .buies{
+	float: left; width: 896px;
+}
+.sort-box .business .buies .top li{
+	float: left; 
+}
+.sort-box .business .buies .top li a{
+	display:block; width: 44px; height: 25px; line-height: 25px; text-align: center;
+}
+.sort-box .business .buies .bottom ul{
+	width: 810px;border: 1px solid #eee;
+	padding: 10px 76px 4px 10px;
+	display: none;
+}
+.sort-box .business .buies .bottom ul li{
+	float: left;
+}
+.sort-box .business .buies .bottom ul li a{
+	margin: 0 18px 4px 0;float: left;
+	line-height: 20px; 
+	height: 20px; padding: 0 5px;
+}
+.sort-box .business .buies .bottom ul li b{
+	color: #ff4424;float: left;
+	 
+}
+.sort-box .business .buies .bottomu li .aback{
+	color: #fff; background: #2bb8aa;
+}
+
+.sort-box .sort .sortb ul li:hover a{
+	color: #fff; background: #2bb8aa;
+}
+.sort-box .business .buies .bottom ul li:hover a{
+	color: #fff; background: #2bb8aa;
+}
+.sort-box .business .buies .top li:hover{
+	text-decoration: underline;
+}
+/*商圈js*/
+.sort-box .business .buies .bottom .show{
+	display: block;
+}
+.sort-box .business .buies .top .active{
+	border-top:2px solid #2bb8aa;
+	background: #eee;
+}
+
+
+
+.content .screen-box{
+	border: 1px solid #eee;
+	margin-bottom: 10px;
+}
+.content .screen-box .scre-l{
+	float: left;
+}
+.screen-box .scre-l li{
+	float: left; position: relative;
+	border-right: 1px solid #eee;
+}
+.screen-box .scre-l li a{
+	float: left; display: block;
+	padding-left: 24px; padding-right: 29px;
+	height: 28px;line-height: 28px; color: #666;
+	border-top:1px solid #fff; position: relative;
+	z-index: 2;background: #fff;
+}
+.screen-box .scre-l li .spa{
+	padding-left: 20px; padding-right: 16px;
+}
+.screen-box .scre-l li .menu{
+	width:100%; height: 158px; background: #fff;
+	position: absolute;top: 28px; left: -1px;
+	text-align: center;line-height: 25px;
+	border: 1px solid #eee; z-index: 1;
+	display: none;
+}
+.screen-box .scre-l li a span{
+	position: absolute;top: 10px;right:15px;
+	width: 7px; height: 8px;
+	background: url(../img/msbj-1.png) no-repeat 0 0;
+}
+.screen-box .scre-l li a i{
+	position: absolute;top: 12px;right:17px;
+	width: 8px; height: 4px;
+	background: url(../img/bj.png) no-repeat 0 0;
+}
+
+
+.screen-box .scre-l ul .active a{
+  border-top: 2px solid #2bb8aa;color: #2bb8aa;
+  margin-top: -1px;
+}
+
+.screen-box .scre-l .active a span{
+	background: url(../img/msbj-1-1.png) no-repeat 0 0;
+}
+.screen-box .scre-l .active1 a span{
+	background: url(../img/msbj-1-1.png) no-repeat 0 0;
+}
+.screen-box .scre-l .active a i{
+	background: url(../img/bj-0.png) no-repeat 0 0;
+}
+.screen-box .scre-l .active .menu{
+	display: block;
+}
+.screen-box .scre-l li .menu dl .active{
+	color: #2bb8aa; background: #eee;
+}
+
+
+
+.screen-box .scre-r{
+	float: left; padding-left: 10px;
+}
+.screen-box .scre-r li{
+	float: left;
+}
+.screen-box .scre-r li a{
+	line-height: 29px; color: #666;
+	padding-left:25px;padding-right:10px;  display: block;
+	background: url(../img/msbj-0-1.png) no-repeat 12px 9px; 
+}
+.screen-box .scre-r .active a{
+	background: url(../img/msbj-0.png) no-repeat 12px 9px; 	
+}
+
+
+
+.content .banner{
+
+}
+.banner .cboxl{
+	float: left; 
+	width: 715px;
+}
+.banner .cboxl ul{ 
+	margin-right: -15px
+ }
+.banner .cboxl li{
+	float: left; border: 1px solid #ccc;
+	margin:0 15px 15px 0;
+}
+.banner .cboxl li .top{
+	margin-bottom: 7px;
+}
+.banner .cboxl li .top img{
+	width: 346px;height: 214px;
+}
+.banner .cboxl li .center .ct{
+	padding-left: 50px; position :relative;
+}
+.banner .cboxl li .center .ct .txt{
+	 position: absolute; left: 14px; top: 8px;
+	 width: 27px;height:16px; padding: 2px;
+	 background: #9e9e9e;color: #fff;
+}
+.banner .cboxl li .center .ct a{
+	float: left;color: #666;
+	font-size: 16px; line-height: 35px; height: 35px;
+}
+.banner .cboxl li .center .ct .tag{
+	float: right;
+	padding-right: 18px; padding-top: 8px;
+	
+}
+.banner .cboxl li .center .ct .tag span{
+	float: right;width: 16px; height: 16px; margin-left: 5px;
+	background: url(../img/msbj-2.png) no-repeat 0 0 ;
+	background: url(../img/msbj-3.png) no-repeat 0 0 ;
+}
+.banner .cboxl li .center .ct .tag .tag1{
+	background: url(../img/msbj-2.png) no-repeat 0 0 ;
+}
+.banner .cboxl li .center .ct .tag .tag2{
+	background: url(../img/msbj-3.png) no-repeat 0 0 ;
+}
+.banner .cboxl li .center .cb{
+	padding-left: 18px;line-height: 35px; height: 35px;
+}
+.banner .cboxl li .center .cb .cbl{
+	float: left;
+}
+.banner .cboxl li .center .cb .cbl .star{
+	float: left;
+	width: 60px;height: 12px; background: url(../img/x1.png) repeat-x 0 0;
+	position: relative;margin: 10px 2px 0 0;
+}
+.banner .cboxl li .center .cb .cbl .star .i1{
+	width: 80%;height: 12px; background: url(../img/x2.png) repeat-x 0 0;
+	position: absolute; left: 0; top: 0;
+}
+.banner .cboxl li .center .cb .cbl .text{
+	float: left;height: 35px; line-height: 35px;
+}
+.banner .cboxl li .center .cb .cbr{
+	float: right; padding-right: 12px; 
+}
+.banner .cboxl li .center .cb .cbr span{
+	padding: 0 2px;
+}
+.banner .cboxl li .bottom{
+	height: 44px; line-height: 44px; border-top: 1px dashed #eee;
+	background: #f9f9f9; padding: 0 18px;
+}
+.banner .cboxl li .bottom .price{
+	float: left;
+}
+.banner .cboxl li .bottom .price a{
+	font-size: 16px; color: #f76120;
+}
+.banner .cboxl li .bottom .info{
+	float: right;
+}
+
+
+.banner .cboxr{
+	float: right;
+}
+.banner .cboxr .cb-top{
+	padding: 0 10px;
+	border: 1px solid #eee;
+	margin-bottom: 15px;
+}
+.banner .cboxr .cb-top a{
+	display: block;height: 112px;
+}
+.banner .cboxr .cb-top .cbt-t{
+	background: url(../img/sprite2.png) 0 -323px;
+	border-bottom: 1px dashed #eee;
+	
+}
+.banner .cboxr .cb-top .cbt-b{
+	padding: 0 10px;
+	background: url(../img/sprite2.png) 0 -932px;
+}
+
+
+
+.banner .cboxr .cb-bottom{
+	border: 1px solid #eee;
+	padding: 0 20px;
+	margin-bottom: 15px;
+}
+.banner .cboxr .cb-bottom h2{
+	height: 50px; line-height: 50px; font-size: 16px;
+	color: #333;
+}
+.banner .cboxr .cb-bottom ol li {
+	border-bottom: 1px dashed #eee;
+	padding-bottom: 10px;margin-bottom: 20px;
+}
+.banner .cboxr .cb-bottom ol li .imgbox{ 
+	position: relative;margin-bottom: 16px;
+ }
+.banner .cboxr .cb-bottom ol li .imgbox img{
+	width: 198px; height: 120px;
+}
+.banner .cboxr .cb-bottom ol li .imgbox i{
+	width: 18px; height: 17px; color: #fff; text-align: center; line-height: 18px;
+	position: absolute; top: -3px;left: 0;
+	background: url(../img/msbj-4.png) no-repeat 0 0;
+}
+.banner .cboxr .cb-bottom ol li h3 {
+	width: 198px; line-height: 18px; 
+	margin-bottom: 14px; color: #666;
+}
+.banner .cboxr .cb-bottom ol li .price{
+	line-height: 14px; font-size: 14px;
+}
+.banner .cboxr .cb-bottom ol li .price span{
+	line-height: 14px; 
+}
+.banner .cboxr .cb-bottom ol li .price i{
+	color: #f76120;
+}
+.banner .cboxr .cb-bottom ol li .price .i1{
+	font-size: 20px;
+}
+.banner .cboxr .cb-bottom ol li .price em{
+	padding-left: 18px;
+}
+
+.banner .cboxr .cb-bottom ol .last{
+	border-bottom: 0;
+	padding-bottom: 10px;
+}
+
+
+
+.banner .cboxr .sban{
+	width: 238px;height: 134px; border: 1px solid #eee;
+	padding-top: 20px;background: url(../img/sprite2.png) no-repeat 0 -777px;
+	margin-bottom: 15px;
+}
+.banner .cboxr .sban h2 a{
+	display: block; height:48px; 
+}
+.banner .cboxr .sban .txt{
+	padding-left: 82px; line-height: 24px;
+	overflow: hidden; width: 150px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+.banner .cboxr .job{
+	width: 238px;height:290px;
+	border: 1px solid #eee;
+}
+.banner .cboxr .job .join a{
+	display: block; height: 120px;
+	background: url(../img/sprite2.png) no-repeat 0 -203px;
+}
+.banner .cboxr .job .job-t{padding: 0 20px;}
+.banner .cboxr .job .job-t a{ 
+	display: block; padding-left: 40px;
+	width: 158px; height: 50px; line-height: 50px;
+	padding-top: 26px;background: url(../img/sprite2.png) no-repeat 0 -538px;
+	border-bottom: 1px dashed #eee;
+ }
+.banner .cboxr .job .job-b{padding: 0 20px;}
+.banner .cboxr .job .job-b a{ 
+	display: block; padding-left: 40px;
+	width: 158px; height: 53px; line-height: 19px;
+	padding-top: 40px;background: url(../img/sprite2.png) no-repeat 0 -110px;
+ }
+
+
+
+.banner .cboxl .page-box{
+	padding-top: 72px;
+	text-align: center;
+}
+
+.banner .cboxl .page-box .page-btn {display: inline-block;}
+.banner .cboxl .page-box .page-btn li{
+	line-height: 34px;
+	border: 1px solid #eee;
+	display: inline-block;
+}
+.banner .cboxl .page-box .page-btn li a{
+	color: #2bb8aa; font-size: 14px;
+	display: block;height: 34px; line-height: 34px;
+	width: 34px; height: 34px; text-align: center;
+}
+
+.banner .cboxl .page-box .page-btn .prev-btn a{
+	width: auto; 
+	padding-left: 16px; padding-right: 10px; 
+}
+.banner .cboxl .page-box .page-btn .next-btn a{
+	width: auto; 
+	padding-right: 16px; padding-left: 10px; 
+}
+.banner .cboxl .page-box .page-btn li:hover{
+	border: 1px solid #2bb8aa;
+}
+.banner .cboxl .page-box .page-btn .active{
+	background: #2bb8aa; 
+}
+.banner .cboxl .page-box .page-btn .active a{
+	color:#fff;
+}

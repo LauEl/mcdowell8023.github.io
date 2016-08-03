@@ -1,0 +1,153 @@
+body{background: #f4f4f4;}
+.main{width: 1002px;margin: 0 auto;}
+/*今日热门*/
+.m1{margin-top: 20px;}
+.m1l{float: left;width: 746px;}
+.m1l-t{height: 70px;}
+.m1l-t h2{float: left;line-height: 70px;font-size: 33px;color: #2b2b2b;margin-right: 15px;}
+.m1lt-ul{float: left;margin-top: 32px;}
+.m1lt-ul li{float: left;height: 20px;padding: 0 14px 0 16px;border-right: 1px solid #bdbdbd;}
+.m1lt-ul li a{color: #242424;font-size: 14px;line-height: 20px;}
+.m1lt-p{float: left;margin-top: 32px;padding-left: 16px;height: 20px;line-height: 20px;}
+.m1lt-p a{color:#242424; }
+
+.m1lb-div{width: 746px;}
+.m1lb-div ul{margin-right: -18px; display: none;}
+.m1lb-div ul li{float: left;margin-left: 6px;margin-bottom: 20px;}
+.m1ltul-a{display: block;position: relative;}
+.m1ltula-d{position: absolute;width: 376px;height: 22px;bottom:0;left:0;}
+.m1ltula-d dt{height: 22px;background: #000;opacity:0.5;filter:alpha(opacity:50);}
+.m1ltula-d dd{position: absolute;top:0;left:0;line-height: 22px;padding-left:4px;color: #fff;font-size: 13px;}
+.m1ltul-div{height: 26px;background: #fff;padding-top: 8px;line-height: 26px;font-size: 13px;color: #444444;padding-left: 4px;}
+
+
+
+
+.m1lb-div ul div{position: absolute;top:0;left:0;display: none;}
+.m1lb-div ul div b{background: #000;opacity:0.5;filter:alpha(opacity:50);height: 254px;display: block;width: 376px;}
+.m1lb-div ul div span{position: absolute;top:50%;left:50%;width: 60px;height: 60px;margin-top: -30px;margin-left: -30px;background: url(../img/bg7.png) no-repeat 0 0;}
+
+.m1ltula-d-1{width: 180px;}
+.m1lb-div ul div .m1ltula-d2-1{width: 180px;height: 100px;}
+
+.m1r{float: right;width:240px;}
+.m1r h2{height: 66px;padding-top: 4px;line-height: 66px;font-size: 24px;color: #333333;}
+.m1r-div{background: #fff;padding-bottom: 10px;}
+.m1r-div .m1rd-a{position: relative;display: block;margin-bottom: 13px;}
+.m1rd-d{position: absolute;left:0;bottom:0;width: 240px;height: 24px;}
+.m1rd-d div{height: 24px;background: #000;opacity:0.5;filter:alpha(opacity:50);}
+.m1rd-d p{position: absolute;left:0;bottom: 0;line-height: 24px;color: #fff;}
+.m1rd-a1{display: block;height: 29px;line-height: 29px;color: #333333;font-size: 13px;padding-left: 10px;}
+
+.m1 a:hover{color: #22ac38;}
+/*js*/
+.m1lt-ul .active a{color: #22ac38;}
+.m1lb-div ul .show{display: block;}
+.m1lb-div .show{display: block;}
+
+
+/*电视剧*/
+
+.m2l{float: left;}
+.m2l-b{width: 746px;}
+.m2l-b ul{margin-right: -14px ; display: none;}
+.m2l-b ul li{float: left;background: #fff;position: relative;margin-right: 10px;margin-bottom: 20px;}
+.m2lb-a{display: block;position: relative;}
+.m2lb-a dl{position: absolute;bottom: 0;left:0;width: 180px;height:24px;}
+.m2lb-a dl dt{height: 24px;background: #000;opacity:0.5;filter:alpha(opacity:50);}
+.m2lb-a dl dd{position: absolute;bottom: 0;left:0;width: 180px;height:24px;}
+.m2lb-a dl dd p{float: left;line-height: 24px;padding-left: 10px;color: #fff;}
+.m2lb-a dl dd i{float: right;padding-right: 10px;color: #fff;line-height: 24px;font-size: 10px;}
+.m2lb-a dl dd i b{color: #94ff77;font-size: 18px;}
+.m2lb-p1{margin-top: 9px;line-height: 24px;color: #333333;font-size: 14px;padding-left: 10px;}
+.m2lb-p2{line-height: 24px;font-size: 14px;color: #999999;padding-left: 10px;margin-bottom: 7px;}
+.m2lb-div{position: absolute;width: 180px;height: 310px;top:0;left:0;display: none;}
+.m2lb-div span{display: block;width: 180px;height: 246px;background: #000;opacity:0.5;filter:alpha(opacity:50);}
+.m2lb-div b{display: block;width: 180px;height: 64px;background:url(../img/bg8.png) no-repeat 15px center #93ca67; opacity:0.9;filter:alpha(opacity:90);}
+.mslbd-a{position: absolute;width: 160px;height: 310px;left:0;top:0;padding-left: 20px;}
+.mslbda-p1{line-height: 80px;color: #fff;margin-bottom: 28px;}
+.mslbd-a i{line-height: 26px;color: #cccccc;display: block;}
+.mslbda-p2{height: 64px;margin-top: 34px;color: #fff;font-size: 20px;line-height: 64px;padding-left: 36px;}
+
+.m2r{float: right;width: 240px;}
+.m2r h2{line-height: 72px;font-size: 24px;color: #2b2b2b;}
+.m2ru{height: 436px;}
+.m2ru a{position: relative;margin-bottom: 10px; display: none;}
+.m2ru-dw{position: absolute;left:0;bottom:0;width: 240px;height: 24px;}
+.m2rudw-bj{height: 24px;background: #000;opacity:0.5;filter:alpha(opacity:50);}
+.m2rudw-nr{position: absolute;width: 240px;height: 24px;left:0;top:0;}
+.m2rudw-nr i{float: left;line-height: 24px;color: #fff;font-size: 14px;padding-left: 46px;}
+.m2rudw-nr span{float: right;line-height: 24px;color: #fff;font-size: 13px;background: url(../img/bg9.png) no-repeat 0 center;padding-left: 24px;padding-right: 10px;}
+.m2ru b{position: absolute;left: 0;bottom: 0;width: 36px;height:36px;line-height: 36px;padding-left:5px;font-size: 20px;color: #fff;background: url(../img/bg10.png) no-repeat 0 0;}
+
+.m2ru dl{height: 34px;width: 240px; background: #eeeeee;}
+.m2ru dt{float: left;width: 30px;height: 34px;line-height: 34px;text-align: center;color: #aaaaaa;font-size: 15px;}
+.m2ru-d1{float: left;width: 134px;height: 34px;line-height: 34px;color: #2b2b2b;font-size: 14px;}
+.m2ru-d2{float: left;padding-left: 23px;height: 34px;line-height: 34px;background: url(../img/bg11.png) no-repeat 0 center;font-size: 12px;color: #aaaaaa;}
+.m2ru .m2ru-li dl{background:#f4f4f4; }
+.m2rdiv{margin-top: 6px;}
+.m2rdiv h3{line-height: 52px;color: #2b2b2b;font-size: 24px;}
+.m2rdiv div{height:135px;background: #fff;padding-top:10px;}
+.m2rd-p{line-height: 29px;padding-left: 20px;font-size: 14px;color: #313131;}
+.m2rd-p a{font-size: 14px;color: #313131;padding: 0 5px;}
+
+.m2 a:hover{color:#22ac38; }
+
+
+/*js*/
+
+.show{display: block;}
+.m2l-b .show{display: block;}
+.m2ru .hide{display: none;}
+.m2ru .show{display: block;}
+
+/*预告片*/
+.m3lb-a{display: block;position: relative;}
+.m3lb-d{position: absolute;width: 180px;height: 22px;left:0;bottom:0;}
+.m3l-b li{float: left;margin-right: 10px;}
+.m3lb-d div{height: 22px;background: #000;opacity:0.5;filter:alpha(opacity:50);}
+.m3lb-d p{position: absolute;width: 180px;height: 22px;top:0;left:0;line-height: 22px;color: #fff;padding-left: 10px;}
+.m3lb-a span{position: absolute;width: 82px;height: 20px;left:0;top:0;background: url(../img/bg12.png) no-repeat 0 0;}
+.m3l-b-p{padding-top: 5px;line-height: 29px;text-align: center;font-size: 14px;color: #444444;width: 180px;background: #fff;}
+.m3rd-d p{padding-left:30px; }
+.m3l-b-p1{font-size: 14px;color: #333333;font-weight: bold;height: 21px;}
+.m3r-div{padding: 0;}
+
+/*综艺*/
+.m1ltul-div1{background: #fff;line-height: 22px;padding-left: 4px;font-size: 13px;color: #888888;padding-bottom: 22px;}
+.m1ltul-div2{background: #fff;line-height: 22px;padding-left: 4px;font-size: 13px;color: #888888;}
+.m4ru{height: 334px;}
+/*动漫*/
+.m5r{float: right;width: 240px;}
+.m5r h2{line-height: 67px;font-size: 24px;color: #333333;}
+.m5r-ul{width: 240px;height: 32px;background: #eeeeee;}
+.m5r-ul li{float: left;width: 33px;height: 32px;margin-right: 1px;line-height: 32px;text-align: center;font-size: 18px;color: #333333;cursor: pointer;}
+.m5r-ul .m5ru-li{background: #46c832;color: #fff;}
+.m5r-ul1{width: 240px;height: 279px;margin-top: 20px;overflow: auto;}
+.m5r-ul1 li{height: 51px;padding-left: 52px;}
+.m5r-ul1 li a{position: relative;line-height: 23px;font-size: 14px;color: #333333;}
+.m5r-ul1 li a i{position: absolute;width: 45px;height: 18px;top:0;left:-50px;background: url(../img/bg13.png) no-repeat 0 0;line-height: 18px;text-align: center;color: #fff;}
+.m5r-ul1 li p{line-height: 17px;color: #8a8a8a;}
+
+/*独家*/
+.m6l-b ul{display: none;}
+.m6lb-li{float: left;width: 621px;}
+.m6lb-li a{float: left;margin-right: 2px;margin-bottom: 2px;position: relative;}
+.m6l-b div{position: absolute;width: 205px;height: 205px;top:0;left:0;display: none;}
+.m6lbl-d-bj{height: 205px;background: #000;opacity:0.5;filter:alpha(opacity:50);}
+.m6l-b div dl{position: absolute;width: 175px;height: 180px;top:0;left: 0;padding-top: 25px;padding-left: 30px;}
+.m6l-b div dl dt{color: #fff;font-size: 24px;line-height: 53px;}
+.m6l-b div dl dd{color: #fff;font-size: 12px;line-height: 40px;}
+.m6lbl-a1 div{width: 412px;}
+.m6lbl-a1 div .m6lbl-d-bj{width: 412px;}
+.m6lbl-a1 div dl{width: 412px;}
+
+.m6lb-li1{float: right;}
+.m6lb-li1 a{position: relative;}
+.m6lb-li1a div{width: 381px;height: 410px;}
+.m6lb-li1a div .m6lbl-d-bj{width: 381px;height: 410px;}
+.m6lb-li1a div dl{width: 381px;}
+
+
+/*js*/
+.m6l-b .show{display: block;}

@@ -1,0 +1,172 @@
+
+/*分类盒子satrt*/
+.content .sort-box{
+	border: 1px solid #eee;
+	padding: 0 15px;
+}
+.sort-box .sort-btn,.sort,.address{
+	border-bottom: 1px dashed #eee;
+	padding-right: 66px;
+}
+
+
+.sort-box .sort-btn{
+	padding: 12px 0;
+}
+.sort-box .sort-btn .sbtn-nam{
+	float: left;width: 68px;
+}
+.sort-box .sort-btn .sbtn-nam a{
+	display: inline-block; padding: 0 8px;
+	height: 20px; line-height: 20px;
+	border: 1px solid #2bb8aa;
+}
+
+
+.sort-box .sort-btn .sbtn{
+	float: left;
+}
+.sort-box .sort-btn .sbtn ul{
+	padding-right: 24px;
+}
+.sort-box .sort-btn .sbtn ul li .arrow{
+	width: 24px;height: 21px;
+	background: url(../img/bj1.png) no-repeat 0 0;
+	position: absolute; top: 0; left: -25px;
+}
+.sort-box .sort-btn .sbtn ul li{
+	float: left; margin-right:45px; 
+	border: 1px solid #2bb8aa; 
+	position: relative; 
+}
+.sort-box .sort-btn .sbtn ul li .bt{
+	display: block;line-height: 20px;
+	background: #fff;position: relative;
+	z-index: 1;
+	padding: 0 16px 0 8px;height: 20px;
+}
+.sort-box .sort-btn .sbtn ul li i{
+	position: absolute;top:-1px; right:-21px;
+	width:20px ;height:20px;text-align: center;
+	line-height: 20px; color: #2bb8aa;
+	border: 1px solid #2bb8aa;border-left: 0;
+}
+.sort-box .sort-btn .sbtn ul li b{
+	position: absolute;top: 7px;right: 6px;
+	background:url(../img/bj.png) no-repeat 0 0;
+	width: 6px; height: 3px;
+}
+.sort-box .sort-btn .sbtn ul li .menu{
+	width: 292px; padding: 12px 0 6px 0; 
+	background: #fff; display: none;
+	border: 1px solid #2bb8aa; overflow: hidden;
+	position: absolute;top: 19px;left: -1px; 
+}
+
+.sort-box .sort-btn .sbtn ul li .menu a{
+	padding:0 10px;display: inline-block;
+	height: 12px; line-height: 12px;margin-bottom: 10px;
+	border-left: 1px solid #eee; margin-left: -1px;
+}
+.sort-box .sort-btn .sbtn ul li .menu .acolor{
+	color:#2bb8aa;
+}
+/*分类阿牛结束*/
+
+/*分类*/
+.sort-box .sort{
+padding-top: 15px; padding-bottom: 4px;
+}
+.sort-box .sort .sort-name{
+	float: left; width: 45px;color: #666;
+	padding-left: 5px; line-height: 20px;
+}
+.sort-box .sort .sortb{
+	float: left; width: 830px;
+}
+.sort-box .sort .sortb ul li{
+	float: left; margin: 0 18px 4px 0;
+}
+.sort-box .sort .sortb ul li a{
+	display: block; line-height: 20px; 
+	height: 20px; padding: 0 5px;
+	position: relative;
+}
+.sort-box .sort .sortb ul li .aback{
+	color: #fff; background: #2bb8aa;
+}
+.sort-box .sort .sortb ul li .acolor{
+	color: #f76120; 
+}
+
+
+
+
+.sort-box .sort .sortb ul li .aads span{
+	width: 12px; height: 20px; 
+	background: url(../img/fbj2.png) no-repeat 0 0;
+	position: absolute; top: 0; left:-10px;
+}
+.sort-box .people{
+	border-bottom: 0; padding-bottom: 5px;
+}
+/*商圈*/
+.sort-box .business{
+padding-top: 10px; padding-bottom: 10px;
+border-bottom: 1px dashed #eee;
+	_display: none;
+}
+.sort-box .business .buies-name{
+	height: 160px;
+	float: left; width: 45px;color: #666;
+	padding-left: 5px; line-height: 20px;
+}
+.sort-box .business .buies{
+	float: left; width: 896px;
+}
+.sort-box .business .buies .top li{
+	float: left; 
+}
+.sort-box .business .buies .top li a{
+	display:block; width: 44px; height: 25px; line-height: 25px; text-align: center;
+}
+.sort-box .business .buies .bottom ul{
+	width: 810px;border: 1px solid #eee;
+	padding: 10px 76px 4px 10px;
+	display: none;
+}
+.sort-box .business .buies .bottom ul li{
+	float: left;
+}
+.sort-box .business .buies .bottom ul li{
+	float: left; margin: 0 18px 4px 0;
+	line-height: 20px; 
+	height: 20px; padding: 0 5px;
+}
+.sort-box .business .buies .bottom ul li b{
+	color: #ff4424;
+	 
+}
+.sort-box .business .buies .bottomu li .aback{
+	color: #fff; background: #2bb8aa;
+}
+
+
+
+.sort-box .sort .sortb ul li:hover a{
+	color: #fff; background: #2bb8aa;
+}
+.sort-box .business .buies .bottom ul li:hover a{
+	color: #fff; background: #2bb8aa;
+}
+.sort-box .business .buies .top li:hover{
+	text-decoration: underline;
+}
+/*商圈js*/
+.sort-box .business .buies .bottom .show{
+	display: block;
+}
+.sort-box .business .buies .top .active{
+	border-top:2px solid #2bb8aa;
+	background: #eee;
+}

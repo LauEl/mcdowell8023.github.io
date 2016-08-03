@@ -1,0 +1,161 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无缝滚动</title>
+<style>
+*{ margin:0; padding:0; list-style:none; text-decoration:none; }
+#box{ width:534px; height:300px; margin:100px auto; position:relative; overflow:hidden; }
+ul{ overflow:hidden; position:absolute; left:0; top:0; }
+li{ float:left; width:534px; height:300px; }
+img{ width:100%; height:100%; }
+#tab{ position:absolute; left:50%; bottom:10px; margin-left:-62px; }
+#tab span{ width:20px; height:20px; background:#ccc; border-radius:50%; float:left; margin:5px; cursor:pointer; }
+#tab span.on{ background:yellow; }
+
+a{ width:100px; height:100px; background:rgba(0,0,0,0.5); position:absolute; top:50%; margin-top:-50px; color:#fff; font-size:30px; text-align:center; line-height:100px; z-index:3; display:none; }
+#box:hover a{ display:block; }
+#prev{ left:0; }
+#next{ right:0; }
+</style>
+<script>
+window.onload=function (){
+	var oBox=document.getElementById('box');
+	var oPrev=document.getElementById('prev');
+	var oNext=document.getElementById('next');
+	var oList=document.getElementById('list');
+	var aLi=oList.children;
+	var oTab=document.getElementById('tab');
+	var aBtn=oTab.children;
+	
+	//复制一份 	
+	oList.innerHTML+=oList.innerHTML;
+	//算宽度
+	oList.style.width=oList.children[0].offsetWidth*aLi.length+'px';
+	//宽度一半
+	var w=oList.offsetWidth/2;
+	//this.index值修改
+	var iNow=0;
+	
+	for(var i=0; i<aBtn.length; i++){
+		aBtn[i].index=i;
+		aBtn[i].onclick=function (){
+			iNow=this.index;
+			tab();
+		};
+	}
+	function tab(){
+		for(var i=0; i<aBtn.length; i++){
+			aBtn[i].className='';
+		}
+		//大于零下一个按钮
+		//小于零上一个按钮 
+		if(iNow>0){
+			//0 1 2 3 4 5 6 7 8 9 分别 %5
+			//0 1 2 3 4 0 1 2 3 4
+			aBtn[iNow%aBtn.length].className='on';
+		}else{
+			//(iNow%aBtn.length+aBtn.length)%aBtn.length
+			//0		%5 	0  + 5 	5  %5 	0  	
+			//-1 		-1 		4 	 	4
+			//-2 		-2 		3 		3
+			//-3 		-3		2 		2
+			//-4	 	-4		1 		1
+			//-5 		0		5 		0
+			aBtn[(iNow%aBtn.length+aBtn.length)%aBtn.length].className='on';
+		}
+				
+		startMove(oList,-iNow*aLi[0].offsetWidth)
+	}
+	oNext.onclick=function (){
+		iNow++;
+		tab();
+	};
+	oPrev.onclick=function (){
+		iNow--;
+		tab();
+	};
+	
+	var left=0;
+	
+	function startMove(obj,iTarget){
+		var count=Math.floor(500/30);
+		var start=left;
+		var dis=iTarget-start;
+		var n=0;
+		
+		clearInterval(obj.timer);
+		obj.timer=setInterval(function (){
+			n++;
+			
+			var a=1-n/count;
+			left=start+dis*(1-Math.pow(a,3));
+			
+			if(left<0){
+				//534 1068 1602 2136 2670  %2670
+				//534 1068 1602 2136 0
+				obj.style.left=left%w+'px';
+			}else{
+				//-2670 + 534 1068 1602 2136 2670  %2670
+				//-2670 + 534 1068 1602 2136 0
+				obj.style.left=-w+left%w+'px';
+			}
+			if(n==count){
+				clearInterval(obj.timer);
+			}
+		},30);
+	}
+};
+</script>
+</head>
+
+<body>
+	<div id="box">
+    	<a id="prev" href="javascript:;">prev</a>
+        <a id="next" href="javascript:;">next</a>
+        <ul id="list">
+        	<li>
+            	<img src="img/0.jpg" alt="" />
+            </li>
+        	<li>
+            	<img src="img/1.jpg" alt="" />
+            </li>
+        	<li>
+            	<img src="img/2.jpg" alt="" />
+            </li>
+        	<li>
+            	<img src="img/3.jpg" alt="" />
+            </li>
+        	<li>
+            	<img src="img/4.jpg" alt="" />
+            </li>
+        </ul>
+        <div id="tab">
+        	<span class="on"></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

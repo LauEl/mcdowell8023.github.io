@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>简易游戏</title>
+<style>
+#box{ width:300px; height:300px; border:10px solid yellow; margin:50px auto; line-height:300px; text-align:center; }
+</style>
+<script>
+window.onload=function (){
+	var oBox=document.getElementById('box');
+	var oImg=document.getElementById('img');
+	var timer=null;
+	var timer2=null;
+	var iNow=0;
+	var iNow2=0;
+	
+	//一直走
+	timer=setInterval(function (){
+		iNow++;
+		oImg.src='0'+(iNow%3+1)+'.png';
+	},150);
+	
+	oBox.onclick=function (){
+		//需要把第一个定时器关掉
+		clearInterval(timer);
+		clearInterval(timer2);
+		timer2=setInterval(function (){
+			iNow2++;
+			oImg.src='fight0'+(iNow2%4+1)+'.png';
+			//图片走两轮
+			if(iNow2==8){
+				//重新开始计数
+				iNow2=0;
+				//关掉timer2的定时器
+				clearInterval(timer);
+				clearInterval(timer2);
+				//把一直走的再重新开启
+				timer=setInterval(function (){
+					iNow++;
+					oImg.src='0'+(iNow%3+1)+'.png';
+				},150);
+			}
+		},150);
+	};
+	
+};
+</script>
+</head>
+
+<body>
+	<div id="box">
+    	<img id="img" src="01.png" alt="" />
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

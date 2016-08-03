@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D旋转图片</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		html,body,div{
+			width:100%;
+			height:100%;
+			background: #000;
+			overflow: hidden;
+		}
+		#box{
+			width:133px;
+			height:200px;
+			margin:150px auto;
+			position: relative;
+
+			transform-style: preserve-3d;
+			transform:perspective(800px) rotateX(-10deg);
+		}
+		#box:after{
+			content: "";
+			position: absolute;
+			bottom:0;
+			left:50%;
+			margin:-1px 0 0 -1px;
+			width:2px;
+			height:2px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 1px 350px rgba(255,255,255,0.05);
+			transform: rotateX(90deg);
+		}
+		#box li{
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			border-radius: 10px;
+
+			box-shadow: 0px 0px 20px 10px rgba(255,255,255,0.7),0px 0px 5px #fff;
+			-webkit-box-reflect:below 20px -webkit-linear-gradient(rgba(0,0,0,0) 60%,rgba(0,0,0,0.5));
+			background: url(img2/1.jpg) no-repeat;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var oUl=document.getElementById('box');
+			var N=11;
+			var timer=null;
+			var bReady=false;
+			for(var i=0; i<N; i++){
+				var oLi=document.createElement('li');
+				oLi.style.backgroundImage="url(img2/"+(i+1)+".jpg)";
+				oLi.style.transition="1s all ease "+(N-i)*200+"ms";
+				oUl.appendChild(oLi);
+
+
+				(function(oLi,i){
+					setTimeout(function(){
+						oLi.style.transform="rotateY("+360/N*i+"deg) translateZ(350px)";
+
+						var op=Math.abs(Math.abs((360/N*i)%360)-180)/180;
+							op=Math.max(op,0.3);
+							oLi.style.opacity=op;
+					},0);
+				})(oLi,i);
+			}
+			var aLi=oUl.children;
+			// oUl在y轴上旋转的角度
+			var y=0;
+			// oUl在x轴上旋转的角度
+			var x=0;
+			aLi[0].addEventListener('transitionend',function(){
+				bReady=true;
+				move(x,y);
+			},false);
+			var speedX=0;
+			var speedY=0;
+			var lastX=0;
+			var lastY=0;
+			document.onkeydown=function(ev){
+				if(!bReady)return;
+				switch(ev.keyCode){
+					case 37:
+						y-=10;
+						break;
+					case 38:
+						x-=10;
+						break;
+					case 39:
+						y+=10;
+						break;
+					case 40:
+						x+=10;
+						break;
+				}
+
+				move(x,y);
+			};
+
+			//拖拽
+			document.onmousedown=function(ev){
+				if(!bReady)return;
+				clearInterval(timer);
+				var disX=ev.clientX-y;
+				var disY=ev.clientY-x;
+				document.onmousemove=function(ev){
+					x=ev.clientY-disY;
+					y=ev.clientX-disX;
+
+					speedX=ev.clientX-lastX;
+					speedY=ev.clientY-lastY;
+
+					lastX=ev.clientX;
+					lastY=ev.clientY;
+					move(x,y);
+				};
+				document.onmouseup=function(){
+					timer=setInterval(function(){
+						speedX*=0.95;
+						speedY*=0.95;
+
+						x+=speedY;
+						y+=speedX;
+
+						move(x,y);
+
+						if(Math.abs(speedX)<0.2&&Math.abs(speedY)<0.2){
+							clearInterval(timer);
+						}
+					},30);
+
+					document.onmousemove=null;
+					document.onmouseup=null;
+				};
+				return false;
+			};
+
+			function move(x,y){
+				var curX=-x/10;
+				var curY=y/10;
+
+				for (var i = 0; i < aLi.length; i++) {
+					aLi[i].style.transition="none";
+					aLi[i].style.transform="rotateY("+(360/N*i+curY)+"deg) translateZ(350px)";
+					var op=Math.abs(Math.abs((360/N*i+curY)%360)-180)/180;
+					op=Math.max(op,0.3);
+					aLi[i].style.opacity=op;
+				}
+				oUl.style.transform="perspective(800px) rotateX("+(curX-10)+"deg)"
+			};
+		};
+	</script>
+</head>
+<body>
+	<div>
+		<ul id="box">
+		</ul>
+	</div>
+</body>
+</html>

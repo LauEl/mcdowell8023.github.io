@@ -1,0 +1,85 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>网易选项卡</title>
+<style>
+*{ margin:0; padding:0; list-style:none; }
+#box{ width:600px; height:300px; background:#ccc; margin:100px auto; overflow:hidden; position:relative; }
+#box ul{ width:600px; height:300px; position:absolute; left:0; top:0; }
+#box ul li{ float:left; width:600px; height:300px; line-height:300px; text-align:center; font-size:50px; font-weight:bold; color:#fff; }
+
+#box ol{ position:absolute; left:50%; bottom:10px; overflow:hidden; margin-left:-180px; }
+#box ol li{ width:70px; height:20px; background:#000; margin-left:5px; float:left; position:relative; }
+#box span{ width:0; height:100%; background:#fff; position:absolute; left:0; top:0; }
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function (){
+	var oBox=document.getElementById('box');
+	var oUl=oBox.children[0];
+	var aLi=oUl.children;
+	var oOl=oBox.children[1];
+	var aBtn=oOl.children;
+	var aS=oBox.getElementsByTagName('span');
+	
+	//算ul宽度
+	oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+	
+	var iNow=0;
+	function next(){
+		for(var i=0; i<aS.length; i++){
+			aS[i].style.width=0;
+		}
+		startMove(aS[iNow],{width:70},{complete:function (){
+			iNow++;
+			if(iNow==aS.length){
+				iNow=0;
+			}
+			startMove(oUl,{left:-aLi[0].offsetWidth*iNow},{complete:next});
+		}});
+	}
+	next();
+};
+</script>
+</head>
+
+<body>
+	<div id="box">
+    	<ul>
+        	<li style="background:#f03">0</li>
+        	<li style="background:#09C">1</li>
+        	<li style="background:#03C">2</li>
+        	<li style="background:#F69">3</li>
+        	<li style="background:#FC3">4</li>
+        </ul>
+        <ol>
+        	<li><span></span></li>
+        	<li><span></span></li>
+        	<li><span></span></li>
+        	<li><span></span></li>
+        	<li><span></span></li>
+        </ol>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

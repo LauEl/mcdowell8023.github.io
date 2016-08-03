@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1465836195'); /* IE9*/
-  src: url('iconfont.eot?t=1465836195#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1465836195') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1465836195') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1465836195#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1467887942'); /* IE9*/
+  src: url('iconfont.eot?t=1467887942#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1467887942') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1467887942') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1467887942#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -19,18 +19,17 @@
 .icon-lianxiwomen:before { content: "\e601"; }
 .icon-fanhuianniu:before { content: "\e602"; }
 .icon-huidaodingbu:before { content: "\e603"; }
-.icon-zuopin:before { content: "\e604"; }
-.icon-shouye:before { content: "\e605"; }
 .icon-res:before { content: "\e606"; }
+.icon-xingzhuang3kaobei:before { content: "\e604"; }
 .icon-zhengfangxingtianjiaanniu:before { content: "\e607"; }
 .icon-guanbianniu:before { content: "\e608"; }
+.icon-github:before { content: "\e605"; }
 .icon-shouyebiaoqianlanxiangshangzhankaianniu01:before { content: "\e609"; }
 .icon-shouyebiaoqianlanxiangxiazhankaianniu01:before { content: "\e60a"; }
 .icon-guanyu:before { content: "\e60b"; }
 .icon-zhedieanniu:before { content: "\e60c"; }
 .icon-xialaanniu:before { content: "\e60d"; }
 .icon-fenxianganniu:before { content: "\e60e"; }
-.icon-yuancircle94:before { content: "\e60f"; }
 .icon-jiankongmonitor72:before { content: "\e610"; }
 .icon-yewubusiness140:before { content: "\e611"; }
 .icon-computer:before { content: "\e612"; }
@@ -38,7 +37,6 @@
 .icon-headset:before { content: "\e614"; }
 .icon-home:before { content: "\e615"; }
 .icon-mail:before { content: "\e616"; }
-.icon-map:before { content: "\e617"; }
 .icon-medianext:before { content: "\e618"; }
 .icon-mediapause:before { content: "\e619"; }
 .icon-mediaprevious:before { content: "\e61a"; }
@@ -47,8 +45,6 @@
 .icon-meidaplay:before { content: "\e61d"; }
 .icon-music:before { content: "\e61e"; }
 .icon-paperclip:before { content: "\e61f"; }
-.icon-photo:before { content: "\e620"; }
-.icon-qq:before { content: "\e621"; }
 .icon-volumeall:before { content: "\e622"; }
 .icon-volumelow:before { content: "\e623"; }
 .icon-volumemedium:before { content: "\e624"; }

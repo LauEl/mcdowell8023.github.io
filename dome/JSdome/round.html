@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>圆形运动的圆</title>
+<style>
+div{ width:300px; height:300px; border:1px solid #f00; border-radius:50%; position:absolute; left:100px; top:100px; }
+span{ position:absolute; left:0; top:0px; width:50px; height:50px; background:red; border-radius:50%; left:50%; margin-left:-25px; margin-top:-25px; }
+</style>
+<script>
+function d2a(n){ 	//角度转弧度
+	return n*Math.PI/180;
+}
+function a2d(){		//弧度转角度
+	return n*180/Math.PI;
+}
+window.onload=function (){
+	var oBox=document.getElementById('box');
+	var oS=oBox.children[0];
+	
+	var r=oBox.offsetWidth/2;
+	
+	var N=4;
+	for(var i=0; i<N; i++){
+		var oS=document.createElement('span');
+		oBox.appendChild(oS);
+	}
+	
+	var bOk=true;
+	document.onclick=function (){
+		var aS=oBox.children;
+		if(bOk){
+			for(var i=0; i<aS.length; i++){
+				doMove(aS[i],i*30);
+			}
+		}else{
+			for(var i=0; i<aS.length; i++){
+				doMove(aS[i],0);
+			}
+		}
+		bOk=!bOk;
+	}
+	
+	function doMove(obj,iTarget){
+		var start=obj.iNow||0;
+		var dis=iTarget-start;
+		var count=Math.floor(1000/30);
+		
+		var n=0;
+		clearInterval(obj.timer);
+		obj.timer=setInterval(function (){
+			n++;
+			var a=1-n/count;
+			var cur=start+dis*(1-Math.pow(a,3));
+						
+			var x=r-Math.cos(d2a(cur))*r; 		//角度
+			var y=r+Math.sin(d2a(cur))*r;
+			
+			obj.style.left=y+'px';
+			obj.style.top=x+'px';
+			
+			obj.iNow=cur;
+			
+			if(n==count){
+				clearInterval(obj.timer);
+			}
+			
+		},30);
+	}
+	
+};
+</script>
+</head>
+
+<body>
+	<div id="box">
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

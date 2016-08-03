@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>划过羞羞</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		html,body{
+			width:100%;
+			height:100%;
+		}
+		div{
+			width:100%;
+			height:100%;
+			background: url(meinv.jpg) no-repeat;
+			background-size:cover;
+			-webkit-mask:url(yuhua.png);
+			-webkit-mask-repeat:no-repeat;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var oDiv=document.getElementsByTagName('div')[0];
+
+			document.onmousemove=function(ev){
+				var oEvent=ev||event;
+				var x=oEvent.clientX-150;
+				var y=oEvent.clientY-150;
+
+				oDiv.style.WebkitMaskPosition=x+"px "+y+"px";
+			};
+		};
+	</script>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>

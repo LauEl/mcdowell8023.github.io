@@ -1,0 +1,9 @@
+ *{margin:0; padding:0;}
+ a{ text-decoration:none;}
+ ul li,ol li{ list-style:none;}
+ strong,b,i,em,h1,h2,h3,h4,h5,h6,div,p{ font-weight:normal; font-style:normal; font-size:12px;}
+ img{ vertical-align:top;}
+
+ 
+ .clearfix:after{ content:''; display:block; clear:both;}
+ .clearfix{ zoom:1;}

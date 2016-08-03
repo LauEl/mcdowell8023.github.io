@@ -1,0 +1,129 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>自定义滚动条</title>
+<style>
+*{ margin:0; padding:0; }
+#box{ width:510px; margin:100px auto; position:relative; }
+#side{ width:30px; height:300px; background:red; position:absolute; right:0; top:0; z-index:2; }
+#bar{ width:100%; height:50px; background:yellow; position:absolute; left:0; top:0; }
+#content{ width:500px; height:300px; border:1px solid #000; overflow:hidden; position:relative; }
+#s{ position:absolute; left:0; top:0; right:30px; }
+</style>
+<script src="wheel2.js"></script>
+<script>
+window.onload=function (){
+	var oBox=document.getElementById('box');
+	var oSide=document.getElementById('side');
+	var oBar=document.getElementById('bar');
+	var oCon=document.getElementById('content');
+	var oS=document.getElementById('s');
+	
+	oBar.onmousedown=function (ev){
+		var oEvent=ev||event;
+		var disY=oEvent.clientY-oBar.offsetTop;
+		document.onmousemove=function (ev){
+			var oEvent=ev||event;
+			var t=oEvent.clientY-disY;
+			change(t);
+		};
+		document.onmouseup=function (){
+			document.onmousemove=null;
+			document.onmouseup=null;
+			
+			oBar.releaseCapture&&oBar.releaseCapture();
+		};
+		oBar.setCapture&&oBar.setCapture();
+		return false;
+	};
+	function change(t){
+		if(t<0){
+			t=0;
+		}else if(t>(oSide.offsetHeight-oBar.offsetHeight)){
+			t=oSide.offsetHeight-oBar.offsetHeight;
+		}
+		oBar.style.top=t+'px';
+		var scale=t/(oSide.offsetHeight-oBar.offsetHeight)*(oS.scrollHeight-oCon.offsetHeight);
+		oS.style.top=-scale+'px';
+	}
+	addWheel(oBox,function (dir){
+		var a=oBar.offsetTop;
+		if(dir){
+			a+=10;
+		}else{
+			a-=10;
+		}
+		change(a);
+	});
+};
+</script>
+</head>
+
+<body>
+	<div id="box">
+        <div id="side">
+            <div id="bar"></div>
+        </div>
+        <div id="content">
+            <div id="s">
+            8月1日，建军节。在东海1•6万余平方公里的广袤海空域，在海陆空天电的五维立体空间，一艘艘战舰游弋，一艘艘潜艇蛰伏，一架架战机临空……海军三大舰队百余艘舰艇、数十架战机、岸防部队以及部分雷达、观通、电子对抗兵力齐聚东海，一场大规模实兵实弹对抗演习正在上演。
+
+　　这一仗，是海军连续第11年围绕复杂电磁条件和水声环境组织实兵实弹对抗演习。海军参谋部训练局领导介绍，此次演练突出复杂电磁环境条件下作战体系运用、侦察预警、远程精确打击、综合防空反导等课题研练，是海军年度例行性训练活动。
+
+　　演习开始。红方潜艇率先发起攻击，潜伏大洋深处的潜艇对蓝方舰艇实施致命一击。与此同时，红方数架战机低空掠海飞行，数枚导弹呼啸而出，对蓝方目标实施精确打击。
+
+　　顿时，波涛汹涌的大海上，狼烟突起。而在看不见的空间里，电磁迷雾波诡云谲，红蓝双方从陆地到海上，从天上到水下，各显身手，斗智斗勇。
+
+　　紧接着，蓝方迅速组织反击，数枚导弹直扑重要目标。红方海上指挥所警报声骤然响起，指挥员命令战机进行截击。4架战机组成编队，从云端直冲而下，对“敌”来袭导弹进行拦截。“发现目标！”“开始攻击！”几枚空对空导弹吐着长长的火舌飞向来袭导弹。
+
+　　粉碎蓝方反击，红方兵力对蓝方海上编队展开空潜舰立体突击。在郑州舰作战指挥室，记者看到，信息化指挥平台实时显示各个方向的信息，尺寸荧屏可一览波涛万里的海空战场，与此同时，随着键盘敲击声，一道道作战指令迅速传递到各作战单元。
+
+　　“发射！”红方飞机、水面舰艇和潜艇按照时间节点依次攻击，各型导弹同时临空，蓝方编队遭受重创。
+
+　　茫茫大海硝烟弥漫，红蓝双方数个兵力群在空中、水面、水下激烈交锋。
+
+　　某新型导弹快艇被誉为“无影利剑”，演习中，红方某导弹快艇单艇连射4枚导弹，一击重创蓝方舰艇。
+
+　　岸舰导弹部队被称作“海岸霹雳”，演习中，数个岸导突击群依托一体化指挥平台，与航空兵密切协同，对蓝方舰艇、码头等多个目标进行有效打击。
+
+　　“猛打、准打、稳打、快打，体现了未来信息化战争突发性强、平战转换节奏快、战争准备时间短的鲜明特征，必须速战速决，提高战场打击效率。”东海舰队训练处处长沈煜介绍说，此次演练，充分检验了不同性能导弹快节奏、多方向对各类目标实施精确打击的作战效果。
+
+　　以快打快，短短几个小时的对抗中，红蓝双方攻防数度转换，蓝方转守为攻，组织导弹快艇、飞机对红方前出舰艇编队进行猛烈攻击，并派出潜艇伺机寻歼红方舰艇。
+
+　　“战斗警报！准备抗击来袭导弹！”郑州舰实习舰长陈曦果断下达作战指令。顿时，郑州舰进入一级战备状态。
+
+　　基本指挥所的大屏幕上，数枚导弹前后间隔X秒，从不同方向贴着海面朝红方舰艇编队飞来。红方迅速分配打击单元，多艘舰艇合力抗击，只见一枚枚对空导弹直冲云霄，划出数道曲线，大海上空闪现出一团团火球，来袭导弹被成功拦截。
+
+　　演习专家组组长、海军导弹业务长陈胜琪告诉记者，此次演练，水面舰艇同时应对空中、水下、水面威胁，全面检验了水面舰艇编队同时处置多方向威胁的能力，更加贴近实战。
+
+　　紧接着，红蓝双方又接连上演了舰机协同对潜艇攻击、海上舰艇编队快速反击作战等精彩环节，数枚鱼雷直入海中，朝着水下蓝方目标迅速攻击。
+
+　　海军党委常委、军委训练管理部领导、东部战区主要领导上战舰、下潜艇，分赴主要指挥部位跟训参训、现场指导。
+
+　　硝烟散尽，红蓝双方舰艇编队高速撤离。东海舰队领导告诉记者，此次演习对实际作战流程、作战体系构建、主战武器装备性能进行了高强度的检验，提高了参演部队遂行任务和诸兵种体系作战的能力，充分展示了我们有能力、有信心履行党和人民赋予的使命任务。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

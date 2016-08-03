@@ -1,0 +1,71 @@
+@charset "utf-8";
+.header{ width:100%;}
+.header h1{ padding-top:12px;}
+.header h1 a{ display:block; width:156px; height:31px; background:url(../img/LOGO.png) no-repeat 0 0; text-indent:-999em; margin:0 auto; }
+.head-box{width:100%;  max-width:640px; margin:0 auto;  padding-top:12px;}
+.head-box .sarch{ position:relative; width:100%; padding-bottom:12px;}
+.head-box .sarch input{width:100%; padding-left:30px; box-sizing:border-box; height:34px; margin:0 auto;}
+.head-box .sarch a{ position:absolute;top:10px; left:10px; background:url(../img/bg01.png) no-repeat 0 0;width:15px; height:15px;}
+.head-box .banner{ width:100%;}
+.head-box .banner a{ display:block;}
+.head-box .banner img{ width:100%;}
+.head-box .nav{ padding-top:13px;}
+.head-box .nav ul{ padding:0 12px;}
+.head-box .nav ul li{ width:25%; float:left;}
+.head-box .nav ul li a{ display:block; text-align:center; padding-top:7px;}
+.head-box .nav ul li a p{ display:block; text-align:center; line-height:28px;}
+.content{width:100%;  max-width:640px; margin:0 auto;  padding-top:20px;}
+.content .special-box{ width:100%; padding:8px; box-sizing:border-box; border:1px solid #e1e4e5; background:#fff; margin-bottom:16px;}
+.content .special-box table{ border-bottom:1px solid #e6e6e6; width:100%; border-collapse:collapse;}
+.special-box table a{ display:block;}
+.special-box table img{}
+.special-box table .td1{ width:25%; border-right:1px solid #e6e6e6;}
+.special-box table .td2{ width:75%; border-bottom:1px solid #e6e6e6;}
+
+.content .hot-box{ width:100%; box-sizing:border-box; border:1px solid #e1e4e5; background:#fff; margin-bottom:16px;}
+.hot-box .hbox-t h2{ height:33px; line-height:33px; font-size:12px; padding-left:12px; box-sizing:border-box; color:#fff; }
+.hot-box .hbox-b{ padding-bottom:2px;}
+.hot-box .hbox-b li{ width:25%; font-size:12px; float:left; text-align:center; }
+.hot-box .hbox-b li a{ display:block; padding-top:3px; padding-bottom:4px;  }
+.hot-box .hbox-b li p{ height:28px; line-height:28px; }
+
+.content .cheap-box{ width:100%; padding:8px; box-sizing:border-box; border:1px solid #e1e4e5; background:#fff; margin-bottom:16px;}
+.content .cheap-box table{ border-bottom:1px solid #e6e6e6; width:100%; border-collapse:collapse;}
+.cheap-box table a{ display:block;}
+.cheap-box table img{ width: 100%; }
+.cheap-box table .td1{ width:25%; border-right:1px solid #e6e6e6;}
+.cheap-box table .td2{ width:75%; border-bottom:1px solid #e6e6e6;}
+
+.content .fashion-box{  border:1px solid #e1e4e5; background:#fff; margin-bottom:16px; }
+.content .fashion-box .f-box-t{ width:100%;  border-bottom:1px solid #e1e4e5; background:#fff; position:relative;}
+.fashion-box .f-box-t h2{ height:42px; line-height:42px; float:left; font-size:18px; padding-left:12px; padding-right:16px; color:#333; }
+.fashion-box .f-box-t p{ height:38px; line-height:42px; float:left; padding-top:4px; }
+.fashion-box .f-box-t span{ width:4px; height:22px; background:#b84789; position:absolute; top:9px; left:0; }
+.fashion-box .f-box-c table{ border-bottom:1px solid #e6e6e6; width:100%; border-collapse:collapse;}
+.f-box-c table a{ display:block;}
+.f-box-c table img{}
+.f-box-c table td{ position: relative; }
+.f-box-c table .td1{ width:50%; border-right:1px solid #e6e6e6;}
+.f-box-c table .td2{ width:50%; border-bottom:1px solid #e6e6e6;}
+.f-box-c table .info{ width:100%; position: absolute; right: 0; top: 0;}
+.f-box-c table .info h4{ line-height: 20px;text-align: right; font-size: 14px; color: #333;}
+.f-box-c table .info p{ line-height: 20px;text-align: right; font-size: 12px; color: #999; }
+
+.f-box-c table .td2 .info h4{
+	text-align: center;
+}
+.fashion-box .f-box-b{ padding-bottom:12px;}
+.fashion-box .f-box-b li{ margin-top:16px; border-right:1px solid #f0f1f2; width:25%; height:16px; line-height:16px; font-size:12px; color:#333; float:left; text-align:center; box-sizing:border-box;}
+.fashion-box .f-box-b .li1{  border-right:0;}
+.fashion-box .f-box-b .li2{  color:red;}
+
+.footer{ width:100%; }
+.footer .foot-t{width:100%; max-width:640px; margin:0 auto;  background:#e6e6e6;  }
+.footer .foot-t a{ padding:0 20px; height:32px;color:#333; line-height:32px;}
+.footer .foot-t .a-btn{ float:right;}
+.footer .foot-b{ width:100%; text-align:center; line-height:40px;}
+
+
+
+
+

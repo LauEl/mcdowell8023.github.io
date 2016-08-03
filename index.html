@@ -2,19 +2,27 @@
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
+<meta name="author" content="McDowell- mcdowell8023.github.io" />
+<meta name="copyright" content="McDowell Home" />
+<meta name="description" content="本站为个人主页，包含作品仅作学习交流，请勿用作商业用途" />
+<link rel="icon" href="/img/favicon.ico" mce_href="/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/img/favicon.ico" mce_href="/img/favicon.ico" type="image/x-icon">
 
 <title>McDowell Home</title>
 <link rel="stylesheet" href="iconfont/iconfont.css">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/index.css">
+<!-- <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/common.css">
-<script src='js/move.js'></script>
+<link rel="stylesheet" href="css/index.css"> -->
+<link rel="stylesheet" type="text/css" href="css/indx.min.css">
+<!-- <script src='js/move.js'></script>
 <script src='js/doMove.js'></script>
-<script src='js/wheel.js'></script>
 <script src='js/common.js'></script>
-<script src='js/index.js'></script>
+<script src='js/index.js'></script> -->
+<script src='js/indx.min.js'></script>
+<script src="http://api.map.baidu.com/api?v=1.4"></script>
 </head>
 <body>
+	<!-- 导航 -->
 	<div class="header " id="header">
 		<div class="head_nav layout clearfix" id="head_nav">
 			<div class="logo">
@@ -22,444 +30,997 @@
 			</div>
 			<div class="nav" >
 				<ul class="clearfix" id="nav">
-					<li><a href="#">主页</a>
+					<li><a href="#home">主页</a>
 						<p>Home</p>
 					</li>
-					<li><a href="#">作品</a>
-						<p>work</p>
-					</li>
-					<li><a href="#">简历</a>
+					
+					<li><a href="#resume">简历</a>
 						<p>Resume</p>
 					</li>
+					<li><a href="#work">作品</a>
+						<p>work</p>
+					</li>
 					<li>
-						<a href="#">联系我</a>
+						<a href="#contact">联系我</a>
 						<p>Contact</p>
 					</li>
 					<li>
-						<a href="#">关于</a>
+						<a href="#about">关于</a>
 						<p>About</p>
 					</li>
 					<li class="border" ></li>
 				</ul>
 			</div>
-			<div class="nav_m" >
-				<a href="javascript:;" class="nav_btn iconfont" id='nav_btn'>&#xe60c;</a>
-				<ul class="clearfix wh100" id="nav_m">
-					<li>
-						<a href="#">主&nbsp;&nbsp;&nbsp;页</a>
-					</li>
-					<li>
-						<a href="#">作&nbsp;&nbsp;&nbsp;品</a>
-					</li>
-					<li>
-						<a href="#">简&nbsp;&nbsp;&nbsp;历</a>
-					</li>
-					<li>
-						<a href="#">联系我</a>
-						
-					</li>
-					<li>
-						<a href="#">关&nbsp;&nbsp;&nbsp;于</a>
-						
-					</li>
-					<li class="border" ></li>
-				</ul>
-			</div>
+
+			<!-- 导航下拉按钮 -->
 			<a href="javascript:;" class ="navbar" id="navbar"></a>
+		</div> 
+
+	</div>
+	<!-- 返回顶部按钮 -->
+	<div id="wheel_btn">
+		<a href="javscript:;" class="iconfont ">&#xe609;</a>
+	</div>
+
+<!--  加载前弹块-->
+	<div id="readybox" class="readybox">
+		<div class="welcome" id="welcome">
+			welcome 
+		</div>
+	</div> 
+
+	<!-- 主页欢迎界面 -->
+	<div class="head-box w100" id="home">
+		<div class="head layout">
+			<div class="head_text">
+				<div class="title">
+					Welcome to McDowell Home
+				</div>
+				<div class="info">
+					准备好了么，就要开始神奇之旅了！
+				</div>
+			</div>
+			<div class="open"><a href="#resume">了解更多</a></div>
 		</div>
 	</div>
-	<div class="main" id="main">
-		<div class="m_page1">
-			<div class="pagebg  h100 layout maxh">
-				 <div class=" playbanner " id="playbanner">
-				 	<div class="left welcome1 h100">
-						<div>Welcome to McDowell Home</div>
-						<p>准备好了么，就要开始神奇之旅了！</p>
-						<ul class="count wh100">
-							<li class="count1 iconfont"><a href="#">&#xe601;</a></li>
-							<li class="count2 iconfont"><a href="#">&#xe604;</a></li>
-							<li class="count3 iconfont"><a href="#">&#xe606;</a></li>
-							<li class="count4 iconfont"><a href="#">&#xe617;</a></li>
-							<li class="count5 iconfont"><a href="#">&#xe610;</a></li>
-							<li class="count6 iconfont"><a href="#">&#xe60f;</a></li>
+	<!-- 简历板块 -->
+	<div class="resume w100" id="resume">
+		
+		<div class="about_me">
+			<div class="about_me_text layout">
+				<ul class="clearfix">
+					<li class="left">
+						<div class="img"> <img src="img/1.png" alt="" /></div>
+						<div class="title">
+							HTML&CSS
+						</div>
+						<div class="text">
+						熟练使用Photoshop对设计图进行切割和导出。熟练掌握HTML/CSS前端开发技术，熟悉W3C标准，熟悉页面优化，了解各主流浏览器特性，使页面兼容主流浏览器。
+ 
+						</div>
+						
+					</li>
+					<li class="left">
+						<div class="img"> <img src="img/2.png" alt="" /></div>
+						<div class="title">
+							JavaScript
+						</div>
+						<div class="text">
+						熟练掌握原生JavaScript语言，熟练DOM操作，可以实现各种网页常用功能效果，独立封装Move框架、AJAX、JSONP等常用插件。熟悉前端常用流行框架，熟悉AJAX、JSONP数据交互技术。
+
+						</div>
+						
+					</li>
+					<li class="left">
+						<div class="img"> <img src="img/3.png" alt="" /></div>
+						<div class="title">
+							HTML5&CSS3
+						</div>
+						<div class="text">
+						熟悉已标准化的HTML5/CSS3新特性，熟练掌握自定义播放器/基础动画/高级动画/canvas，并为PC端、移动端添加3D、高级动画等效果。 
+						</div>
+						
+					</li>
+					<li class="left">
+						<div class="img"> <img src="img/4.png" alt="" /></div>
+						<div class="title">
+							Mobile
+						</div>
+						<div class="text">
+						熟练编写移动端页面，掌握 定宽布局/流式布局/响应式布局（媒体查询）/弹性布局/rem布局5种常用布局。并配合HTML5和JavaScript添加相应动态。 
+						</div>
+						
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="education">
+			<div class=" layout clearfix ">
+				<div class="experience left">
+					<h2>MY KILLS</h2>
+					<div class="experience_box">
+						<ul id="ex_list">
+							<li>
+								<h3><span>2010-2013</span>大学</h3>   
+								<dl class="active">
+									<dt>邯郸学院</dt>
+									<dd><span>√</span>嵌入式系统工程</dd>
+								</dl>
+							</li>
+							<li>
+								<h3><span>2013-2015</span>北京信达宏科技有限公司</h3>   
+								<dl>
+									<dt>售后运维</dt>
+									<dd><span>√</span>计算机、网络日常维护</dd>
+								</dl>
+							</li>
+							<li>
+								<h3><span>2015-2016</span>北京通鑫恒科技有限公司</h3>   
+								<dl>
+									<dt>前端开发</dt>
+									<dd><span>√</span>参与公司各个项目的前端开发工作，根据设计图完成静态页的转化。</dd>
+									<dd><span>√</span>运用HTML+CSS+JavaScript技术对所参与的项目进行开发和维护，完成相关页面的改版需求，协调测试人员及跟进开发过程中的bug</dd>
+									<dd><span>√</span>与后台开发人员进行沟通以完成前后台的对接工作。</dd>
+
+								</dl>
+							</li>
+						</ul>   
+					</div>
+				</div>
+				<div class='ex_progress right'>
+					  <ul class="clearfix" id="circle">
+								<li>
+									<canvas width="100" height="100"></canvas>
+									<h3>PC端</h3>
+								</li>
+								<li>
+									<canvas width="100" height="100"></canvas>
+									<h3>Mobile端</h3>
+								</li>
+								<li>
+									<canvas width="100" height="100"></canvas>
+									<h3>原生JavaScript</h3>
+								</li>
+								<li>
+									<canvas width="100" height="100"></canvas>
+									<h3>数据交互</h3>
+								</li>
+					  </ul>
+				</div>
+			</div>
+		</div>
+		<div class="skill">
+			<div class="skill_box layout clearfix">
+				<div class="skill_progress left">
+						<ul>
+							<li>
+								<h3>HTML&CSS</h3>
+								<div><span>0%</span></div>
+							</li>
+							<li>
+								<h3>JavaScript</h3>
+								<div><span>0%</span></div>
+							</li>
+							<li>
+								<h3>HTML5&CSS3</h3>
+								<div><span>0%</span></div>
+							</li>
 						</ul>
-					</div>
-				 
-					<div class="welcome2 left h100">2</div>
-					<div class="welcome3 left h100">3</div>
-					<div class="welcome4 left h100">4</div>
-					<div class="welcome5 left h100">5</div>
-					<div class="welcome6 left h100">6</div>
 				</div>
-				<ol id="playbtn">
-		        	<li><span></span></li>
-		        	<li><span></span></li>
-		        	<li><span></span></li>
-		        	<li><span></span></li>
-		        	<li><span></span></li>
-		        	<li><span></span></li>
-		        </ol>
-			</div>
-		</div >
-		<div class="m_page2">
-			<div class="work clearfix maxh  layout">
-				<div class="sidebar left ">
-					<div>
-						<h2>work</h2>
-						<p>以下为个人作品</p>
-					</div>
-					
-					<ul id="info_title" >
-						<li>
-							<a href="javasript:;">html/css</a>
-						</li>
-						<li>
-							<a href="javascript:;">原生js</a>
-						</li>
-						<li>
-							<a href="javascript:;">html/css</a>
-						</li>
-						<li class="limov w100"></li>
-					</ul>
-				</div>
-				<div class="tab right h100" id="tab">
-					<!-- css/html介绍 -->
-					<ul class=" clearfix  tab_block">
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-					</ul>
-					<!-- css/html介绍END -->
-
-					<!-- 原生js介绍 -->
-					<ul class=" clearfix ">
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-					</ul>
-					<!-- 原生js介绍END -->
-					
-
-					<!-- 原生js介绍 -->
-					<ul class=" clearfix ">
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-						<li >
-							<a href="javascript:;">
-								<div class="work_bor">
-									<div  class="info">项目说明</div>
-								</div>
-							</a>
-							<img src="img/work.png" alt="" />
-						</li>
-					</ul>
-
-					<!-- 原生js介绍 -->
+				<div class="info right">
+						<h2>Introduce</h2>
+						<p>  
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站运用HTM5L+CSS3+原生JavaScript+完成前端静态页面实现；配合animation.css库配合实现炫酷效果。我利用闲暇时间，熟悉了各种常用css3样式，与原生JavaScript的配合使用展现各种效果。总结自己学习研究的成果，将平时研究、学习的demo共享到站内，并开放demo源码，与大家共同共享。<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人有一年web前端开发经验，熟练掌握网站制作的相关技术，了解移动端开发流程和布局；沟通能力良好，善于团队协作，善于钻研，对前端开有持续热情，平时喜欢逛CSDN、大前端等技术网站论坛。计划未来5年内成为团队主力开发，可以参与几个较大项目的开发工作。<br/>注：本站及附带dome仅用于学习交流，请勿用于非法用途。
+						</p>
+						<a href="#contact">Contact Me</a>
 
 				</div>
 			</div>
 		</div>
-		<div class="m_page3">
-			<div class="computer_bg wh100" id="computer_bg">
-				<div class="computer_1"> <img src="img/mpeage3_computer1.png" alt="" /></div>
-				
-				<div class="cup" id="cup"><img src="img/mpeage3_computer3.png" alt="" /></div>
-				<div class="glasses" id="glasses"> <img src="img/mpeage3_computer4.png" alt="" /></div>
 
-				
+	</div>
+	<!-- 作品板块 -->
+	<div class="work w100" id="work">
+		<!-- <div class="title">< !-- My Work </div> -->
+		<div class="object">
+				<div class="object_box layout">
+					<h2>My object</h2>
+						<ol class="clearfix" id="work_btn">
+							<li class="svg-wrapper">
+						      	<svg height="40" width="150">
+						        	<rect id="shape" height="40" width="150"></rect>
+						        </svg>
+						        <div class="text">
+						          <a href="javascript:;"><span class="spot"></span>All</a>
+						        </div>
+							</li>
+							<li >
+						      	<svg height="40" width="150">
+						        	<rect id="shape" height="40" width="150"></rect>
+						        </svg>
+						        <div class="text">
+						          <a href="javascript:;"><span class="spot"></span>HTML&css</a>
+						        </div>
+							</li>
+							<li>
+						      	<svg height="40" width="150">
+						        	<rect id="shape" height="40" width="150"></rect>
+						        </svg>
+						        <div class="text">
+						          <a href="javascript:;"><span class="spot"></span>HTML(mobile)</a>
+						        </div>
+							</li>
+							<li >
+						      	<svg height="40" width="150">
+						        	<rect id="shape" height="40" width="150"></rect>
+						        </svg>
+						        <div class="text">
+						          <a href="javascript:;"><span class="spot"></span>javascript</a>
+						        </div>
+							</li>
+							<li>
+						      	<svg height="40" width="150">
+						        	<rect id="shape" height="40" width="150"></rect>
+						        </svg>
+						        <div class="text">
+						          <a href="javascript:;"><span class="spot"></span>HTML5&css3</a>
+						        </div>
+							</li>
+							<li>
+						      	<svg height="40" width="150">
+						        	<rect id="shape" height="40" width="150"></rect>
+						        </svg>
+						        <div class="text">
+						          <a href="javascript:;"><span class="spot"></span>JSONP</a>
+						        </div>
+							</li>
+						</ol>
+						<ul class="clearfix" id="work_list">
 
-				<div class="note" id="note"> <img src="img/mpeage3_computer6.png" alt="" /></div>
+							<!-- 页面 -->
+								<li >
+									<a href="dome/html/360/index.html" target="_blank" class="hc">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿360影视首页</h3>
+												<p>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h-360.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/html/aiqiy/index.html" target="_blank" class="hc">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿爱奇艺首页</h3>
+												<p>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h-aiqiyi.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/html/jd/index.html" target="_blank" class="hc">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿京东首页</h3>
+												<p>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h-jd.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/html/lhhx/index.html" target="_blank" class="hc">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿灵魂回响游戏首页</h3>
+												<p>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h-lhhx.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/html/mt/index.html" target="_blank" class="hc">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿美团首页</h3>
+												<p>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h-mt.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/html/taobao/taobao.html" target="_blank" class="hc">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿淘宝首页</h3>
+												<p>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h-taobao.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/html/xiaomi/index.html" target="_blank" class="hc">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿小米首页</h3>
+												<p>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h-xm.png" alt="" />
+								</li>
+							<!-- 移动端页面 -->
+								<li >
+									<a href="dome/html/mobile/aitaobao/index.html" target="_blank" class="hm">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿爱淘宝首页（移动端）</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本页面使用100%布局<br/>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/hm-aitaobao.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/html/mobile/273/index.html" target="_blank" class="hm">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿273首页（移动端）</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本页面使用100%布局<br/>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/hm-car.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/html/mobile/jhs-js/index.html" target="_blank" class="hm">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿聚划算首页（移动端）</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本页面使用rem布局，添加移动端事件实现无缝滚动选项卡。<br/>仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/hm-jhs.png" alt="" />
+								</li>
 
-				<div class="key"> <img src="img/mpeage3_computer5.png" alt="" /></div>
 
-				<div class="mouse" id="mouse"> <img src="img/mpeage3_computer7.png" alt="" /></div>
-				<div class="computer_2"> <img src="img/mpeage3_computer2-2.png"></div>
-				
 
+								<!-- JavaScript -->
+								<li >
+									<a href="dome/JSdome/getbigjs/getbig.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>移入放大</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS进行DOM操作实现方法效果，同时完美解决层级问题。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-getbigjs.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/round.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>圆形运动轨迹</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS进行DOM操作结合三角函数实现弧形轨迹。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-round.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/wheel/wheel.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>自定义滚动条</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS进行鼠标滚轮事件封装，兼容各版本浏览器，在通过回调函数及拖拽、DOM操作等实现滚动条实现效果。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-wheel.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/wynewstab.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>仿网易新闻选项卡</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过定时器及move框架回调函数实现效果。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-wynewstab.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/js3Dshow/index.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>3D产品展示（JS版）</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过move框架接DOM操作模拟3D效果，解决了无法判断运动完成的问题。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-3Dshow.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/accordionTAB.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>手风琴选项卡</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一种特殊选项卡，通过css与JS紧密结合完成布局，同时通过“星星”原理，利用index与if结合实现效果。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-accordionTAB.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/movement navigation.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>运动导航</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;弹性运动，move框架的一个变种，通过原生JS结合物理运动学，控制加速度，并通过系数模拟出摩擦效果从而实现弹性运动。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-movement-navigation.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/Paging switch.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>分页切换</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS进行DOM操作实现布局转化将相应位置存入数组，通过定时器实现分步。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-Paging switch.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/Seamless scrollingtab.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>无缝滚动</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS进行判断并结合DOM操作实现方法效果。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-Seamless-scrollingtab.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/JSdome/black/jgd.html" target="_blank" class="js">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>移入变黑</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS进行DOM操作实现方法效果。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/js-black.png" alt="" />
+								</li>
+
+								<!-- jsonp -->
+								<li >
+									<a href="dome/jsonp/WebQQ/webchat.html" target="_blank" class="jp">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>web聊天</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS进行DOM操作结合JSONP进行跨域获取数据，实现同步聊天，消息收发，登陆名123，密码123；当然你也可以自行注册。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/jp-webchat.png" alt="" />
+								</li>
+							<!-- h5 -->
+								<li >
+									<a href="dome/H5dome/pointboom.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>幻灯片爆炸效果</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5放大、旋转、位移等效果配合transition动画，模拟爆炸效果<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5pointboom.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/H5dome/pointfz.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>幻灯片翻转效果</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5旋转、镜面等效果配合transition动画，模拟颗粒翻转效果<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5-pointfz.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/H5dome/css3click.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>css3时钟</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5旋转、位移等效果模拟出钟表，结合定时器及事件对象，算出事件及旋转角度。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5-css3click.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/H5dome/pointboom.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>立方体</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5旋转、位移等效果并使用transform:perspective视距及transform-style: preserve-3d;呈现出3D效果，通过键盘方向键控制旋转。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5-cube.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/H5dome/cube.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>弧形时钟</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5canvas绘制圆弧，再通过时间对象及定时器结合控住弧度，从而实现钟表运行。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5-lclick.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/H5dome/screensaver.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>线条屏保</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5canvas绘制点，模拟弹性运动，将点的位置速度存入数组，根据数组信息绘制线条，影子根据存入数据的数据依次绘制，并改变透明度。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5-screensaver.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/H5dome/3Ddc.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>3D层叠</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5旋转、位移等效果并使用transform:perspective视距及transform-style: preserve-3d;呈现出3D效果，并配以transition动画。<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5-3Ddc.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/H5dome/3Dshow.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>3D产品展示（h5版）</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5变形、位移等效通并使用transform:perspective视距呈现出3D效果，并通过transitionend监听运动结束<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5-3Dshow.png" alt="" />
+								</li>
+								<li >
+									<a href="dome/H5dome/3Dxz.html" target="_blank" class="h5">
+										<div class="work_bor">
+											<div  class="info">
+												<h3>3D旋转展示</h3>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过原生JS结合H5变形、位移等效通并使用transform:perspective视距呈现出3D效果，并通过transitionend监听运动结束<br/>注：仅作学习交流使用，切勿用作其他非法用途</p>
+											</div>
+										</div>
+									</a>
+									<img src="img/h5-3Dxz.png" alt="" />
+								</li>
+
+
+
+
+						</ul>
+				</div>
+		</div>
+		<div class="game">
+				<div class="game_box layout">
+						<!-- <div class="gamebox"> -->
+							<div class="gametitle">
+								<h2>Game</h2>
+								<p>趣味小游戏，增添小乐趣</p>
+							</div>
+							<ul id="game_list">
+								
+								<li>
+									<a href="dome/game/mgame/mgame.html"  target="_blank">
+									    <span class="text">简易小游戏</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/g-mgame.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">待开发</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/game4.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>
+								<li>
+									<a href="dome/game/buyu/index5.html"  target="_blank">
+									    <span class="text">捕鱼</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/g-buyu.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="dome/game/ball.html"  target="_blank">
+									    <span class="text">弹跳球</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/g-ball.gif" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>
+								<li>
+									<a href="dome/game/pintu/pintu.html"  target="_blank">
+									    <span class="text">拼图</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/g-pintu.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="dome/game/mouseover.html"  target="_blank">
+									    <span class="text">划过查看</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/g-mouse.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;"  target="_blank">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/game3.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="dome/game/piano.html"  target="_blank">
+									    <span class="text">简易钢琴</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/g-piano.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">待开发</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/game6.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">待开发</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>								
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/game6.png" alt="" /></div>
+									</a>
+								</li>
+
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/game4.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/game3.png" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="" alt="" /></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>								
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"></div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+									    <span class="text">Forefathers</span>
+										<div class="layer1"></div>
+										<div class="layer2"></div>
+										<div class="layer3"><img src="img/game6.png" alt="" /></div>
+									</a>
+								</li>
+								
+							</ul>
+						<!-- </div> -->
+				</div>
+		</div>
+	</div>
+	<!-- 联系我、关于板块 -->
+	<div class="about w100">
+		<div class="contact " id="contact">
+			<div class="layout">
+				<h2>Contact me</h2>
+				<div class="contact_box">
+					<ul class="clearfix">
+						<li>
+							<span>
+							<a href="javascript:;" class="iconfont">&#xe626;</a>
+							</span>
+							<p ><img src="img/wx.png"></p>
+						</li>
+						<li>
+							<span>
+							<a href="javascript:;" class="iconfont">&#xe627;</a>
+							</span>
+							<p><img src="img/wb.png"></p>
+						</li>
+						<li>
+							<span>
+							<a href="javascript:;" class="iconfont smallicon">&#xe616;</a>
+							</span>
+							<p>
+								<i>
+								Email:<br/>
+								mcdowell8023<br/>@126.com</i>
+							</p>
+						</li>
+						<li>
+							<span>
+							<a href="javascript:;" class="iconfont">&#xe605;</a>
+							</span>
+							<p>
+								<i>
+								Github:<br/>
+								mcdowell8023</i>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="map_back clearfix w100" id="about">
+		<div class="layout">
+				<div class="social">
+					<div class="social_info">
+						<div class="face_img"><img src="img/face_img.jpg"></div>
+						<h3>孟显超  mcdowell</h3>
+						<p>
+							<i class="iconfont">&#xe604;</i>
+									河北-廊坊-燕郊
+						</p>
+						<p>
+							<i class="iconfont smallicon">&#xe616;</i>
+								mcdowell8023@126.com
+						</p>
+					</div>
+				</div>
+				<div class="map_box layout ">
+					<div class="map" id="map"></div>
+					<div class="map_bg">
+							this.style.top="my.longitude";<br/>
+							this.style.left="my.latitude";
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="m_page4"></div>
-		<div class="m_page5"></div>
+		<p class="foot w100">
+			Copyright © 2016.McDowell All rights reserved<br/>
+			 
+		</p>
 	</div>
-	<div class="m_page" id="m_page">
-		<p class="on"><span>主页</span></p>
-		<p><span>作品</span></p>
-		<p><span>游戏</span></p>
-		<p><span>简历</span></p>
-		<p><span>关于</span></p>
-	</div>
+	
 
 </body>
 </html>

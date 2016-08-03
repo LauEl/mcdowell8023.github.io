@@ -1,0 +1,14 @@
+ *{margin:0; padding:0;}
+ a{ text-decoration:none; color:#333;}
+ ul li,ol li{ list-style:none;}
+ strong,b,i,em,h1,h2,h3,h4,h5,h6,div,p{ font-weight:normal; font-style:normal; font-size:12px; font-family:"微软雅黑";}
+ img{ vertical-align:top;}
+ body{ font-family:"微软雅黑"; color:#666;}
+ 
+ .clearfix:after{ content:''; display:block; clear:both;}
+ .clearfix{ zoom:1;}
+ 
+ a:hover{ color:#7eb910;}
+.header-box .header .nav-box .nav ul li p a:hover{ color:#7eb910;}
+
+.variety .variety-rb ul li a:hover{ color:#7eb910;}

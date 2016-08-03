@@ -1,0 +1,715 @@
+.header-box {
+	width: 100% ;min-width:  980px; 
+	border - top: 1px solid #eee;
+	border-bottom:1px solid #ddd;
+	background: #f9f9f9;
+}
+.header-box .header{
+	width: 980px; 
+	height: 30px;
+	margin: 0 auto;z-index: 20;
+	position: relative;
+}
+.header .nav-l{
+	float: left;
+}
+.header li{
+	float: left;
+	position: relative;
+	
+}
+
+.header .nav-l li a{
+	display: block;
+	padding-left: 5px;
+	padding-right: 9px;
+	line-height: 30px;
+	border-right: 1px solid #f9f9f9;
+	border-left: 1px solid #f9f9f9;
+}
+.header .nav-l li .acolor{
+	color: #f76120
+}
+.header .nav-l .start  a{
+	padding-left: 0px;
+	padding-right: 15px;
+}
+.header .nav-l .start  a b{
+	font-size:16px; font-weight: bold;
+}
+/*未完成*/
+.header .nav-l .start  a:hover b{
+	color:#f76120;
+	}
+	
+	
+.header .nav-l .last {
+	margin-left: 10px;
+}
+.header .nav-l .last  a{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.header .nav-l .last  i{
+	position: absolute; 
+	top: 20%; 
+	left:-8px;
+}
+.header .nav-l .last  b{
+	width: 8px; height: 12px;
+	background: url(../img/bj2.png) no-repeat 0 0;
+	position: absolute; 
+	top: 50%; margin-top: -6px;
+	left: 20px;
+}
+.header .nav-l .last  span{
+	width: 6px; height: 3px;
+	background: url(../img/bj.png) no-repeat 0 0;
+	position: absolute; 
+	top: 50%; margin: -2px;
+	right: 10px;
+}
+
+/*下拉菜单*/
+.header .nav-l .last .emnu{
+	width: 164px; height: 265px;
+	border: 1px solid #ddd;background: #fff;
+	position: absolute; 
+	top:30px; z-index: 1;
+	left: 0px; display: none;
+}
+.header .nav-l .last .emnu div{
+	text-align: center;
+	line-height: 132px;
+	border-bottom: 1px dashed #eee;
+}
+.header .nav-l .last .emnu .bottom{
+	border: 0;
+}
+
+/*手机美团添加js*/
+.header .nav-l .show a{
+	position: relative;
+	z-index: 2;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	background: #fff;
+	height: 31px;
+	color: #2ab9ab;
+}
+.header .nav-l .show .emnu{
+	display: block;
+}
+.header .nav-l .show  b{
+	background: url(../img/bj2-0.png) no-repeat 0 0;
+}
+.header .nav-l .show  span{
+	background: url(../img/bj-0.png) no-repeat 0 0;
+}
+
+
+
+
+.header .nav-r{
+	float: right;
+}
+
+.header .nav-r li a{
+	display:block;
+	line-height: 30px;
+	padding-right: 22px;
+	padding-left: 12px;
+	border-right: 1px solid #f9f9f9;
+	border-left: 1px solid #f9f9f9;
+}
+.header .nav-r .start a{
+	padding-right: 10px;
+}
+.header .nav-r li a span{
+	width: 6px; height: 3px;
+	background: url(../img/bj.png) no-repeat 0 0;
+	position: absolute; 
+	top: 50%; margin: -2px;
+	right: 10px;
+}
+.header .nav-r .buycar a{
+	padding-left: 34px;
+}
+.header .nav-r .buycar a b{
+	width: 12px; height: 13px;
+	background: url(../img/bj3.png) no-repeat 0 0;
+	position: absolute; 
+	top: 50%; margin: -5px;
+	left: 12px;
+}
+.header .nav-r li strong{
+	color: #ddd;
+	position: absolute; 
+	top: 20%; 
+	right: 0px;
+}
+.header .nav-r .buycar a i{
+ color: #f76120;
+}
+
+
+/*我的美团下拉js*/
+.header .nav-r .mymt .menu{
+	width: 82px; 
+	height: 228px;
+	background: #fff;
+	border:1px solid #eee;
+	position: absolute;
+	top:30px; left: 0;z-index: 1;
+	display: none;
+}
+.header .nav-r .mymt .menu dd{
+	color: #666;
+	height: 30px; line-height: 30px; 
+	text-align: center;
+}
+
+/*最近浏览js*/
+.header .nav-r .zj .menu{
+	width: 279px; text-align: center;
+	height: 70px;line-height: 70px; 
+	background: #fff;
+	border:1px solid #eee;
+	position: absolute;
+	top:30px; right: 0;z-index: 1;
+	display: none;
+}
+/*购物车js*/
+.header .nav-r .buycar .menu{
+	width: 279px; text-align: center;
+	height: 70px;line-height: 70px; 
+	background: #fff;
+	border:1px solid #eee;
+	position: absolute;
+	top:30px; right: 0;z-index: 1;
+	display: none;
+}
+
+/*联系客服下拉js*/
+.header .nav-r .talk .menu{
+	width: 92px; 
+	height: 170px;
+	background: #fff;
+	border:1px solid #eee;
+	position: absolute;
+	top:30px; right: 0;z-index: 1;
+	display: none;
+}
+.header .nav-r .talk .menu dd{
+	color: #666;
+	height: 30px; line-height: 30px; 
+	text-align: center;
+}
+/*我是商家下拉js*/
+.header .nav-r .im .menu{
+	width: 97px; 
+	height: 140px;
+	background: #fff;
+	border:1px solid #eee;
+	position: absolute;
+	top:30px; right: 0;z-index: 1;
+	display: none;
+}
+.header .nav-r .im .menu dd{
+	color: #666;
+	height: 30px; line-height: 30px; 
+	text-align: center;
+}
+
+/*更多下拉js*/
+.header .nav-r .more .menu{
+	width: 80px; 
+	height: 110px;
+	background: #fff;
+	border:1px solid #eee;
+	position: absolute;
+	top:30px;right: 0;z-index: 1;
+	display: none;
+}
+.header .nav-r .more .menu dd{
+	color: #666;
+	height: 30px; line-height: 30px; 
+	text-align: center;
+}
+
+
+.header .nav-r .show a{
+	position: relative;
+	z-index: 2;
+	background: #fff;
+	height: 31px;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+.header .nav-r .show .menu{
+	display:block;
+}
+.header .nav-r .show a{
+	color: #2ab9ab;
+}
+.header .nav-r .show a span{
+	background: url(../img/bj-0.png) no-repeat 0 0;
+}
+.header .nav-r .hide strong{
+	display: none;
+}
+
+
+
+
+/*第二部分*/
+.head-box{
+	width: 980px; 
+	margin: 0 auto;
+}
+
+
+.head-box .hboxt {
+	padding-top: 20px;
+}
+/*logo*/
+.hboxt .logo-box{
+	float: left;
+	padding-bottom: 30px;
+	margin-right: 93px;
+}
+.hboxt .logo-box h1{
+	float: left; margin-right: 10px;
+	
+}
+.hboxt .logo-box h1 .logo{
+	display: block; 
+	width: 82px ;
+	height: 54px;
+	background:url(../img/logo.png) no-repeat 0 0;
+	text-indent: -999em;
+}
+.hboxt .logo-box .adderse{
+	float: left;	
+}
+.hboxt .logo-box .adderse h2{
+	font-size: 18px; 
+	line-height: 30px;
+}
+.hboxt .logo-box .adderse .adbtn{
+	font-size: 12px; color: #999;
+	line-height: 20px;text-align: center;
+	display: block;
+	width: 58px; height: 20px; 
+	border: 1px solid #eee;
+}
+/*搜搜狂*/
+.hboxt .search-box{
+	float: left;
+	position: relative;
+	padding-bottom: 30px;
+}
+.hboxt .search-box .top{
+	border: 2px solid #2db8ad;
+}
+.hboxt .search-box .top .tl{
+	float: left;
+	border-right:1px solid #eee;
+	position: relative;
+}
+.hboxt .search-box .top .tl a{
+	display: block;
+	width: 60px; height: 38px;
+	text-align: center;
+	line-height: 38px;
+	font-size: 14px;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	position: relative; z-index: 2;
+}
+.hboxt .search-box .top .tl a span{
+	width: 6px; height: 3px;
+	background: url(../img/bj.png) no-repeat 0 0;
+	position: absolute; 
+	top: 50%; margin: -2px;right: 10px;
+}
+
+
+/*下拉框及JS*/
+.hboxt .search-box .top .tl .btnbox{
+	width: 60px; height: 38px;
+	text-align: center;
+	line-height: 38px;
+	font-size: 14px;
+	background: #fff;
+	border:1px solid #ddd;
+	position:absolute; top: 37px; left: 0;z-index: 1;
+	display: none;
+}
+.hboxt .search-box .top .show .btnbox{
+	display: block;
+}
+.hboxt .search-box .top .show a{
+	display: block;
+	background: #f9f9f9;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+.hboxt .search-box .top .show a span{
+	background: url(../img/bj-0.png) no-repeat 0 0;
+}
+
+.hboxt .search-box .top .tr{
+	float: left;
+}
+.hboxt .search-box .top .tr .search-k {
+	width: 353px; height: 38px;
+	font-size: 14px; color: #ccc;
+	line-height: 38px;
+	padding-left: 5px;
+}
+.hboxt .search-box .top .tr .search-btn {
+	width: 62px; height: 38px;
+	background: #2db8ad;
+	font-size: 14px; color: #fff;
+	line-height: 38px;
+}
+
+.hboxt .search-box .bottom{
+	width: 100%; height: 40px;
+	line-height: 40px;
+	position: absolute;
+	bottom: 0; 
+	left: 0; 
+}
+.hboxt .search-box .bottom a{
+	padding-right: 10px; 
+}
+.hboxt .hboxtr{
+	padding-top: 32px;
+	float: right;
+}
+.hboxt .hboxtr a{
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	line-height: 20px;
+}
+.hboxt .hboxtr a span{
+	width: 22px; height: 22px;
+	background: url(../img/sprite1.png) no-repeat 0 0;
+	position: absolute;
+	bottom: 20px; left: 50%; margin-left:-11px; 
+}
+.hboxt .hboxtr a .span2{
+	background: url(../img/sprite1.png) no-repeat -24px 0 ;
+}
+.hboxt .hboxtr a .span3{
+	background: url(../img/sprite1.png) no-repeat -48px 0;
+}
+
+/*分类*/
+.head-box .nav-box{
+	font-size: 16px;
+	line-height: 40px;
+	padding-bottom: 10px;
+}
+.head-box .nav-box .nav-bt{
+	width: 246px; 
+	height: 40px;
+	background: url(../img/navbj.png) repeat-x 0 0 ;
+	float: left;  position: relative; z-index: 5;
+}
+.head-box .nav-box .nav-bt .bt{
+	color: #fff;padding-left: 14px;
+}
+
+.head-box .nav-box .nav-bt span{
+	width: 18px;height: 11px; background: url(../img/fbj1-u.png) no-repeat 0 0;
+	position: absolute;top: 50%;margin-top: -5px; right: 22px;
+}
+
+.nav-box .nav-bt .sidebar{
+	float:left;
+	width: 245px;
+	background: #fafafa;
+	border: 1px solid #eee;
+	position: absolute;top:40px;left: 0;
+	z-index: 5;display: none;
+}
+.nav-box .nav-bt .sidebar ul li{
+
+}
+.nav-box .nav-bt .sidebar ul li .item{
+	position: relative;
+	padding:0 10px;
+}
+.nav-box .nav-bt .sidebar ul li .abtn{
+	display: block;
+	padding-left: 4px;
+	 height: 52px;
+	border-bottom: 1px solid #eee;
+	font-size: 14px ; color: #333;
+	line-height: 52px;
+	
+}
+.nav-box .nav-bt .sidebar ul li .last{
+	border-bottom: 0;
+}
+.nav-box .nav-bt .sidebar ul li .abtn p{
+	font-size: 12px ; color: #999;
+	line-height: 14px;
+	padding-right: 15px;
+	position: absolute;
+	right: 15px; top: 20px;
+}
+.nav-box .nav-bt .sidebar ul li .abtn span{
+	background: url(../img/bj4.png) no-repeat 0 0;
+	width: 7px; height: 12px; 
+	position: absolute;
+	right: 0; top: 1px;
+}
+
+.nav-box .nav-bt .sidebar ul li .menu{
+	width: 250px;
+	position: absolute;top: 0;
+	left:246px;display: none;
+	height: 475px;
+	border: 1px solid #ddd;
+	border-left: 0;
+	border-top: 0;
+	background: #fff;
+	padding:0 20px;
+
+}
+.nav-box .nav-bt .sidebar ul li .menu1{width: 150px}
+.nav-box .nav-bt .sidebar ul li .menu dl{
+	float: left; width: 120px;
+	vertical-align: top; 
+}
+.nav-box .nav-bt .sidebar ul li .menu dl a{
+	color:#666; font-size: 12px;
+}
+.nav-box .nav-bt .sidebar ul li .menu dl dt{
+	
+	height: 58px;line-height: 58px;
+	font-size: 18px;
+}
+.nav-box .nav-bt .sidebar ul li .menu dl dd{
+	
+	height: 24px;line-height: 24px; 
+}
+.nav-box .nav-bt .sidebar ul li i{
+	background: #fff;
+	height: 52px;width: 1px;
+	position: absolute;top: 0;right: -1px;
+	display: none;
+}
+.nav-box .nav-bt .sidebar ul li a:hover{
+	color: #2ab9ab;
+}
+.nav-box .nav-bt .sidebar ul li .menu dl a:hover{
+	color: #2ab9ab;
+}
+.nav-box .nav-bt .sidebar:hover{
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.nav-box .nav-bt .sidebar:hover .item{
+	padding-right: 0px;
+}
+
+/*侧边栏到导航js*/
+.nav-box .nbt .sidebar{
+	display: block;
+}
+.head-box .nav-box .nbt span{
+	background: url(../img/fbj1-d.png) no-repeat 0 0;
+}
+
+.nav-box .nav-bt .sidebar ul .show{
+	background: #fff;
+}
+.nav-box .nav-bt .sidebar ul .show .menu{
+	display: block;
+}
+.nav-box .nav-bt .sidebar ul .show i{
+	display: block;
+}
+.nav-box .nav-bt .sidebar ul .show span{
+	display: none;
+}
+
+
+/*导航*/
+.head-box .nav-box .nav{
+	width: 734px; 
+	float: left;
+	background: #2bb8aa;
+}
+.head-box .nav-box .nav li{
+	float: left;
+	text-align: center;
+}
+.head-box .nav-box .nav li a{
+	color: #fff;
+	display:block;
+	height: 40px;
+	width: 86px;
+}
+.head-box .nav-box .nav li:hover{
+	background: url(../img/navbj.png) repeat-x 0 0 ;
+} 
+
+
+
+
+/*第三部分*/
+.content{
+	width: 980px; 
+	margin: 0 auto;
+}
+
+
+
+
+
+
+/*底部选项卡*/
+.content .footnav{
+	padding-top:40px;
+}
+.footnav .fnavt ul{
+	float: left;
+	border: 1px solid #eee;
+	border-bottom: 0;
+	border-right: 0;
+}
+.footnav .fnavt ul li{
+	float: left;
+	border-right: 1px solid #eee;
+	background: #f9f9f9;
+}
+.footnav .fnavt ul .active{
+	background: #eee;
+}
+.footnav .fnavt ul li a{
+	color: #666;
+	line-height: 24px;
+	display: block;
+	height: 24px;padding: 0 21px;
+}
+.footnav .fnavb{
+	border: 1px solid #eee;
+	padding: 10px;
+}
+.footnav .fnavb ul .show{
+	display: block;
+}
+.footnav .fnavb ul li{
+	display: none;
+}
+.footnav .fnavb ul li a{
+	display: inline-block;
+    color: #666;
+    font-size: 12px;
+    padding: 0 5px;
+    line-height: 16px;
+    white-space: nowrap;
+    width: 85px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+/*底部导航*/
+.footer-box{
+	width: 100%;min-width: 980px;
+	background: #fafafa;
+	
+}
+.footer-box .footerbg{
+	width: 100%;min-width: 980px;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+}
+.footer-box .footerbg .divbg{
+	width: 980px;margin: 0 auto;
+	
+}
+.footer-box .divbox{
+
+  	padding-bottom:20px;
+  	border-bottom: 1px solid #eee; 
+  	margin-bottom: 1px;
+  }
+
+.footer-box .footernav{
+  	padding:20px 0 34px 0;
+  	border-top: 1px solid #eee; 
+}
+.footernav ul{
+	float: left;
+	border-right: 1px solid #eee;
+}
+.footernav ul li{
+	float: left;
+	padding-left: 14px;
+	width: 165px;
+}
+.footernav ul li dl dt{
+	color: #666;
+	font-size: 14px; 
+	font-weight: bold;
+	line-height: 22px;
+	padding-bottom: 11px;
+}
+.footernav ul li dl dd{
+	font-size: 12px; 
+	line-height: 22px;
+}
+.footernav .phonebox{
+	float: left;
+	padding-left: 36px;
+	padding-top: 50px;
+	background: url(../img/bj13.png) no-repeat 0 0;
+}
+.footernav .phonebox p{
+	height: 24px;
+	line-height: 24px;
+}
+.footernav .phonebox .phone div{
+	height: 24px;color: #666;
+	line-height: 24px;
+	font-size: 18px;font-weight: bold;
+}
+.footernav .phonebox .phone div span{
+	height: 12px;color: #eee;
+	line-height: 12px;
+	font-size: 12px;
+}
+
+.footernav .phonebox .text {
+	padding-top: 26px;
+	line-height: 20px;
+}
+.footernav .phonebox .text a{
+	color: #2bb8aa;
+}
+
+
+/*
+尾部开始*/
+
+
+.footer-box .footer{
+	width: 980px;margin: 0 auto;
+	text-align: center;
+}
+.footer-box .footer .text{
+	padding:30px 0;
+}
+.footer-box .footer img{
+	margin-right: 10px;
+}

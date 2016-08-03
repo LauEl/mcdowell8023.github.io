@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>webQQ</title>
+<style>
+	*{margin: 0;padding: 0; list-style: none; outline: none;}
+	a{ text-decoration: none;  color: #ccc; }
+	body{ background: url(images/blue_glow.jpg) no-repeat 0 0; background-size: cover; }
+	.form{ width: 300px; height:200px; border: 2px solid rgba(0,0,0,0.5); border-radius: 10px; position: absolute; top: 50%; left: 50%; margin-left: -150px; margin-top: -150px; background: rgba(0,0,0,0.6); font-size: 20px; }
+	.form .text{ text-align: center; padding-top: 50px; }
+	.form .text label{ color: #FFF;  }
+	.form .text input{ height: 14px; width: 150px;  border:1px solid #ccc; border-radius: 10px; padding: 5px;  }
+
+	.form .btnbox{text-align: center; padding: 20px 0;}
+	.form .btnbox input{ background: #fff; border: 2px solid #ccc; border-radius: 5px; height: 30px; width: 100px; font-size: 20px; font-weight: bold; }
+
+	.form .img{width: 64px; height: 64px; position: absolute; left:50%; top: -32px; margin-left: -32px; border-radius: 50%; background: rgba(255,255,255,.8); overflow:hidden;}
+	.form .img img{height: 100%; width: 100%;}
+	.form .img a{ width: 10px; height: 20px; background: rgba(0,0,0,0.3); color: #fff; font-size: 18px; line-height: 20px; position: absolute; top: 50%; margin-top: -10px; display: none;   }
+	.form .img .next{right: 0;}
+	.form .img:hover a{ display: block; }
+
+
+	.talkbox{
+		width:600px; height: 400px;background: rgba(0,0,0,0.5); border-radius: 10px;position: absolute; top: 50%; left: 50%; margin-left: -300px; margin-top: -200px; overflow: hidden; display: none;
+	}
+	.talkbox .talkbox-t{height: 30px; background: rgba(0,0,0,.8); color: #fff; text-align: center; line-height: 30px; position:relative;}
+	.talkbox .talkbox-t a{ position: absolute; top: 0; right: 0; height: 30px; width: 30px;  }
+	.talkbox .talkbox-t .tit{ padding-left: 10px; height: 30px; position: absolute; top: 0 ; left: 0; color: #fff; overflow: hidden;}
+	.talkbox .talkbox-t .tit .imgt{ width: 30px; height: 30px; border-radius: 5px; float:left; overflow: hidden; }
+	.talkbox .talkbox-t .tit .imgt img{ width: 100%; height: 100%; }
+	.talkbox .talkbox-t .tit h3{ line-height: 30px;  padding: 0 10px; font-size: 14px; font-weight: normal; float: left; }
+
+	.talkbox .talkbox-b{ overflow: hidden; _background: #fff; }
+	.talkbox .talkbox-b .talk-l{width: 70%; float: left;}
+	.talkbox .talkbox-b .talk-l .talk{ height:320px;_border-right: 3px solid rgba(255,255,255,0.1); padding-right: 20px; position: relative; overflow: hidden;}
+	.talkbox .talkbox-b .talk-l .talk-list{ min-height: 320px; position: absolute; bottom: 0; left: 0; width: 100%;}
+	.talkbox .talkbox-b .talk-l .talk-list  li{padding: 10px 10px 0 10px;}
+	.talkbox .talkbox-b .talk-l .talk-list  li .tbox{ overflow: hidden;}
+	.talkbox .talkbox-b .talk-l .talk-list  li .tbox .img{ width: 30px; height: 30px; border-radius: 5px; float:left; overflow: hidden;   }
+	.talkbox .talkbox-b .talk-l .talk-list  li .tbox .img img{ width: 100%; height: 100%; }
+	.talkbox .talkbox-b .talk-l .talk-list  li .tbox .txt{ float: left; color: #fff; font-size: 12px; padding: 5px; line-height: 14px; border-radius: 5px; background: rgba(0,123,187,0.6); margin:8px 5px 0 5px;}
+	.talkbox .talkbox-b .talk-l .talk-list  li .time{ font-size: 12px; text-align: center;  }
+
+
+
+	.talkbox .talkbox-b .talk-l .talk-list  .useli .tbox .img{  float:right;    }
+	.talkbox .talkbox-b .talk-l .talk-list  .useli .tbox .txt{ float: right; }
+
+
+
+	.talkbox .talkbox-b .talk-l .sendbox{padding:10px 0;background: #000; overflow: hidden; }
+	.talkbox .talkbox-b .talk-l .sendbox textarea{height: 30px; float: left; width: 350px; margin-left: 10px; border: none; resize:none;}
+	.talkbox .talkbox-b .talk-l .sendbox input{height: 30px; font-size: 16px; background: rgba(0,123,187,0.6); color: #fff; line-height: 30px; text-align: center; width: 50px; border-radius: 5px; float: right; margin-right: 5px; border: none;}
+
+		.talkbox .talkbox-b .talk-r{ width: 30%; float: right; position: relative; height: 370px; }
+		.talkbox .talkbox-b .talk-r .talkr-list{min-height:320px; width: 100%; position: absolute; bottom: 0; left: 0;}
+
+	.talkbox .talkbox-b .talk-r .talkr-list  li{padding: 10px 10px 0 10px;}
+	.talkbox .talkbox-b .talk-r .talkr-list  li .tbox{ overflow: hidden;}
+	.talkbox .talkbox-b .talk-r .talkr-list  li .tbox .img{ width: 30px; height: 30px; border-radius: 5px; float:left; overflow: hidden;   }
+	.talkbox .talkbox-b .talk-r .talkr-list  li .tbox .img img{ width: 100%; height: 100%; }
+	.talkbox .talkbox-b .talk-r .talkr-list  li .tbox .txt{ float: left; color: #ccc; font-size: 12px; padding: 5px; line-height: 14px; border-radius: 5px; margin:8px 5px 0 5px;}
+
+
+		.talkbox .talkbox-b .talk-r .talk-rb{height: 50px;background: #000; overflow: hidden;position: absolute; bottom: 0; left: 0; width: 100%; }
+
+		#siber,#siber2{ position: absolute; top: 0; right: 0px; height: 100%; width: 10px; border-radius: 5px; background: rgba(255,255,255,0.1);  }
+		#bar,#bar2{position: absolute; bottom: 0; right: 0; height: 20px; width: 10px; border-radius: 5px; background: red;}
+		#siber2{right:0; height: 86%;}
+</style>
+<script src='jsonp.js'></script>
+<script src='wheel.js'></script>
+<script>
+function toDou(iNum){
+	return iNum<10?'0'+iNum:''+iNum;
+}
+function gettime(time){
+	var oDate=new Date(time*1000);
+	return oDate.getFullYear()+'-'+toDou(oDate.getMonth()+1)+'-'+toDou(oDate.getDate())+' '+toDou(oDate.getHours())+':'+toDou(oDate.getMinutes())+':'+toDou(oDate.getSeconds());
+}
+
+	window.onload=function(){
+		var oForm=document.getElementById('form');
+		var oImgbox=document.getElementById('images');
+		var oImg=oImgbox.children[0];
+		var oPrev=oImgbox.children[1];
+		var oNext=oImgbox.children[2];
+
+		var oU=document.getElementById('username');
+		var oP=document.getElementById('password');
+		var oLog=document.getElementById('login');
+		var oAdd=document.getElementById('add');
+
+		var oTalkbox=document.getElementById('talkbox');
+		var oTit=document.getElementById('tit');
+		var oSend=document.getElementById('send');
+		var oSendt=oSend.children[0];
+		var oSendb=oSend.children[1];
+		var user='';
+
+		var oTlist=document.getElementById('talklist');
+		var oTrlist=document.getElementById('talkrlist');
+		var oClose=document.getElementById('close');
+		var oBar=document.getElementById('bar');
+		var oBar2=document.getElementById('bar2');
+
+		var url='http://zhinengshe.com/exercise/im/api.php';
+		var faceID=0;
+		var token='';
+		var msgID=0;
+		var timer=null;
+
+		oPrev.onclick=function(){
+			faceID--;
+			if (faceID==-1) {
+				faceID=9;
+			}
+			oImg.src='images/'+faceID+'.jpg';
+			oImg.alt=faceID;
+		}
+		oNext.onclick=function(){
+			faceID++;
+			if (faceID==10) {
+				faceID=0;
+			}
+			oImg.src='images/'+faceID+'.jpg';
+			oImg.alt=faceID;
+		}
+		oAdd.onclick=function(){
+			jsonp({
+				url:url,
+				data:{
+					a:'reg',
+					user:oU.value,
+					pass:oP.value,
+					face:oImg.alt
+				},
+				success:function(json){
+					if (!json.err) {
+						alert(json.msg);
+					}else{
+						alert(json.msg);
+					}
+				},
+				error:function(err){
+					alert(err);
+				}
+			})
+		}
+		oLog.onclick=function(){
+			jsonp({
+				url:url,
+				data:{
+					a:'lgn',
+					user:oU.value,
+					pass:oP.value
+				},
+				success:function(json){
+					if (!json.err) {
+						alert(json.msg);
+						user=oU.value;
+						token=json.token;
+						faceID=json.face;
+						oImg.src='images/'+faceID+'.jpg';
+						oImg.alt=faceID;
+						oForm.style.display='none';
+						oTalkbox.style.display='block';
+						oTit.innerHTML='<div class="imgt"><img src="images/'+faceID+'.jpg" alt=""></div><h3>'+oU.value+'</h3>';
+
+						getmsg();
+						//getusermsg();
+						newmsg();
+						myScroll(oBar,oTlist);
+						myScroll(oBar2,oTrlist);
+					}else{
+						alert(json.msg);
+					}
+				},
+				error:function(err){
+					alert(err);
+				}
+			})
+		}
+		oSendb.onclick=function(){
+			jsonp({
+				url:url,
+				data:{
+					a:'snd_msg',
+					content:oSendt.value,
+					token:token
+				},
+				success:function(json){
+					if(!json.err){
+						console.log(faceID,oSendt.value,json)
+						//var time=json.time//,json.ID
+						var oLi=createmsg(faceID,oSendt.value,user,json.time);
+						oTlist.appendChild(oLi);
+						oLi.className='useli';
+						oSendt.value='';
+						msgID=json.ID;
+						console.log(msgID)
+					}else{
+						alert('发送失败')
+					}
+				}
+			})
+		}
+		oClose.onclick=function(){
+			jsonp({
+				url:url,
+				data:{
+					a:'logout',
+					token:token
+				},
+				success:function(json){
+					if(!json.err){
+						alert(json.msg);
+						oForm.style.display='block';
+						oTalkbox.style.display='none';
+						token='';
+						
+					}
+				}
+			})
+		}
+
+		function getusermsg(){	
+			var arr=[];			//获取用户列表
+			jsonp({
+				url:url,
+				data:{
+					a:'get_user_list',
+					token:token
+				},
+				success:function(json){
+					if (!json.err) {
+						arr=json.data;
+						//faceID=data.face;
+						for(var i=0; i<arr.length; i++){
+							var oLi=document.createElement('li');
+							oLi.innerHTML='<div class="tbox"><div class="img"><img src="images/'+arr[i].face+'.jpg" alt=""></div><p class="txt">'+arr[i].username+'</p></div>';
+							oTrlist.appendChild(oLi);
+						}
+						
+					}else{
+						alert(json.msg);
+					}
+				},
+				error:function(err){
+					alert(err);
+				}
+			})
+			return arr;
+		}
+		function getmsg(){
+			jsonp({
+				url:url,
+				data:{
+					a:'get_msg',
+					token:token
+				},
+				success:function(json){
+					if (!json.err) {
+						var arr=json.data;
+						//faceID=data.face;
+						var arr1=getusermsg();
+						
+						oTlist.innerHTML='';
+						for(var i=0; i<arr.length; i++){
+							for( var j=0; j<arr1.length; i++){
+								if(arr[i].username==arr1[j].username){
+									arr[i].face=arr1[j].face;
+								}
+							}
+							var oLi=createmsg(arr[i].face,arr[i].content,arr[i].username,arr[i].post_time);
+
+							oTlist.appendChild(oLi);
+							if (arr[i].username==user) {
+								oLi.className='useli';
+							}
+						}
+						msgID=(arr[arr.length-1].ID)
+					}else{
+						alert(json.msg);
+					}
+				},
+				error:function(err){
+					alert(err)
+				}
+			})
+		}
+		function createmsg(face,con,uname,time){
+			var oLi=document.createElement('li');
+			oLi.innerHTML='<li ><div class="tbox"><div class="img"><img src="images/'+face+'.jpg" alt=""></div><p class="txt">'+con+'</p></div><p class="time">'+uname+'发表于:'+gettime(time)+'</p></li>';
+			return oLi;
+		}
+
+		function newmsg(){
+		clearInterval(timer);
+		timer=setInterval(function(){
+			//console.log('test')
+			if(token){
+					jsonp({
+						url:url,
+						data:{
+							a:'get_msg_n',
+							n:msgID,
+							token:token
+						},
+						success:function(json){
+							if (!json.err) {
+								var arr=json.data;
+								for(var i=0; i<arr.length; i++){
+									var oLi=createmsg(arr[i].face,arr[i].content,arr[i].username,arr[i].post_time);
+									oTlist.appendChild(oLi);
+									if (arr[i].username==user) {
+										oLi.className='useli';
+									}
+									msgID++;
+								}
+								
+							 }else if(json.err==3) {
+								
+								clearInterval(timer);
+							}else{
+								alert(json.msg);
+							}
+						},
+						error:function(err){
+							alert(err);
+						}
+					})
+				
+			}else{
+				clearInterval(timer);
+			}	
+		},1000)
+	}
+
+	function myScroll(oBar,oChatList){
+		oBar.onmousedown=function (ev){
+			var oEvent=ev||event;
+			var disY=oEvent.clientY-oBar.offsetTop;
+			document.onmousemove=function (ev){
+				var oEvent=ev||event;
+				var t=oEvent.clientY-disY;
+				
+				change(t);
+			};
+			document.onmouseup=function (){
+				document.onmousemove=null;
+				document.onmouseup=null;
+				oBar.releaseCapture&&oBar.releaseCapture();
+			};
+			oBar.setCapture&&oBar.setCapture();
+			return false;
+		};
+
+		function change(t){
+				if(t<=0){
+					t=0;
+				}else if(t>(oBar.offsetParent.offsetHeight-oBar.offsetHeight)){
+					t=(oBar.offsetParent.offsetHeight-oBar.offsetHeight);
+				}
+				
+				oBar.style.top=t+'px';
+				var scale=t/(oBar.offsetParent.offsetHeight-oBar.offsetHeight);
+				oChatList.style.bottom='auto';
+				oChatList.style.top=-scale*(oChatList.offsetHeight-oChatList.offsetParent.offsetHeight)+'px';
+		}
+		addWheel( oChatList,function(dir){
+				var a=oBar.offsetTop;
+			if (dir) {
+				a+=10
+			} else {
+				a-=10
+			}
+			 change(a)
+		})
+	}
+
+
+
+	};
+</script>
+</head>
+<body>
+	<div class="form" id="form">
+		<div class="img" id="images">
+		<img src="images/0.jpg" alt="0">
+			<a href="javaxcript:;" class="prev"><</a>
+			<a href="javaxcript:;" class="next">></a>
+		</div>
+		<div class="text">
+			<label for="username">用户名：</label>
+			<input type="text" id="username"></br>
+			</br>
+
+			<label for="password">密&nbsp;码：</label>
+			<input type="password" id="password">
+		</div>
+		<div class="btnbox">
+			<input type="button" value="注&nbsp;册" id="add">&nbsp;
+			<input type="button" value="登&nbsp;陆" id="login">
+		</div>
+	</div>
+	<div class="talkbox" id="talkbox">
+		<div class="talkbox-t">
+			<div class="tit" id="tit">
+				<div class="imgt">
+					<img src="images/0.jpg" alt="">
+				</div>
+				<h3>用户名</h3>
+			</div>
+			<p>聊天室</p>
+			<a href="javascript:;" id="close">X</a>
+		</div>
+		<div class="talkbox-b">
+			<div class="talk-l">
+			
+			<div class="talk">
+				<ul class="talk-list" id="talklist">
+<!-- 					<li class="useli">
+						<div class="tbox">
+							<div class="img">
+								<img src="images/0.jpg" alt="">
+							</div>
+							<p class="txt">你说啥?</p>
+						</div>
+						<p class="time">123发表于:2016-06-03 18:08:56</p>
+					</li> -->
+				</ul>	
+				<div id="siber">
+					<a href="javascript:;" id="bar"></a>
+				</div>
+			</div>
+			<div class="sendbox" id="send">
+				<textarea ></textarea>
+				<input type="button" value="发送" >
+			</div>
+		</div>
+		<div class="talk-r">
+			<ul class="talkr-list" id="talkrlist">
+<!-- 				<li>
+					<div class="tbox">
+						<div class="img">
+							<img src="images/0.jpg" alt="">
+						</div>
+						<p class="txt">你说啥?</p>
+					</div>
+				</li> -->
+			</ul>
+			<div id="siber2">
+					<a href="javascript:;" id="bar2"></a>
+			</div>
+			<div class="talk-rb"></div>
+		</div>
+
+		</div>
+		
+	</div>
+</body>
+</html>
